@@ -13,6 +13,7 @@ body {
 }
 .menu-bar{
   background-color: #b8b9ba;
+  padding: 5px;
 }
 .menu-button{
   width: 200px;
