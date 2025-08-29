@@ -4,43 +4,39 @@ body {
   font-family: Arial, sans-serif;
   background-color: #cfd0d1;
   min-height: 100vh;
-  
 }
-.header{
+.header {
   margin: 0px;
   padding: 0px;
   background-color: #cfd0d1;
 }
-.menu-bar{
+.menu-bar {
   background-color: #b8b9ba;
   padding: 5px;
 }
-.menu-button{
+.menu-button {
   width: 200px;
   height: 50px;
   font-size: 30px;
 }
-.container {
+.main {
   text-align: center;
   background-color: #e1e2e3;
   height: 500px;
   padding: 5px;
 }
-
 .title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-
 .game-list {
   list-style: none;
   padding: 0;
+  font-size: 10px;
 }
-
 .game-list li {
   margin: 0.5rem 0;
 }
-
 .game-list a {
   text-decoration: none;
   color: #333;
@@ -51,6 +47,6 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.game-list a:hover {
+.game-list a:hover{
   background-color: #f0f0f0;
 }
