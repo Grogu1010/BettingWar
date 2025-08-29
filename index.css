@@ -1,14 +1,17 @@
 body {
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: Arial, sans-serif;
   background-color: #cfd0d1;
   min-height: 100vh;
   
 }
 .header{
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
   background-color: #cfd0d1;
 }
+.menu-bar
 .menu-button{
   width: 200px;
   height: 50px;
@@ -17,6 +20,8 @@ body {
 .container {
   text-align: center;
   background-color: #e1e2e3;
+  height: 500px;
+  padding: 5px;
 }
 
 .title {
