@@ -2,16 +2,10 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #e1e2e3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 .header{
   background-color: #cfd0d1;
-  display: flex;
-  justify-content: left;
-  align-items: left;
 }
 .container {
   text-align: center;
