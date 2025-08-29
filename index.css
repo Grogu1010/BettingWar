@@ -1,8 +1,9 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #e1e2e3;
+  background-color: #cfd0d1;
   min-height: 100vh;
+  
 }
 .header{
   margin: 0;
@@ -15,6 +16,7 @@ body {
 }
 .container {
   text-align: center;
+  background-color: #e1e2e3;
 }
 
 .title {
