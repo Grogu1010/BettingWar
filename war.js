@@ -1,4 +1,5 @@
-const { useEffect, useMemo, useState } = React;
+import React, { useEffect, useMemo, useState } from "https://cdn.skypack.dev/react@17";
+import ReactDOM from "https://cdn.skypack.dev/react-dom@17";
 
 // Self-contained 4-player War game component (no external CSS, no ReactDOM)
 // Exports a React component for canvas preview.
@@ -70,7 +71,7 @@ const BOT_NAMES=["Rogue Bot","Tinker Bot","Echo Bot"];
 function deal(players=4){const deck=newDeck(); const per=Math.floor(deck.length/players); return Array.from({length:players},(_,i)=>deck.slice(i*per,(i+1)*per));}
 function deepClonePlayers(players){return players.map(p=>({...p, deck:p.deck.slice(), inPlay:p.inPlay.slice()}));}
 
-function WarGame(){
+export default function WarGame(){
   const [faceDownCount,setFaceDownCount]=useState(3);
   const [players,setPlayers]=useState(()=>initPlayers(faceDownCount));
   const [round,setRound]=useState(0);
@@ -225,4 +226,8 @@ function WarGame(){
   );
 }
 
-ReactDOM.render(<WarGame />, document.getElementById('root'));
+// If running directly in a browser environment without a bundler,
+// attempt to mount automatically when a root element is present.
+if (typeof document !== "undefined" && document.getElementById("root")) {
+  ReactDOM.render(<WarGame />, document.getElementById("root"));
+}
