@@ -11,7 +11,9 @@ body {
   padding: 0px;
   background-color: #cfd0d1;
 }
-.menu-bar
+.menu-bar{
+  background-color: #b8b9ba;
+}
 .menu-button{
   width: 200px;
   height: 50px;
