@@ -5,6 +5,7 @@ body {
   min-height: 100vh;
 }
 .header{
+  margin: 0;
   background-color: #cfd0d1;
 }
 .container {
