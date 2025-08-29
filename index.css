@@ -39,6 +39,7 @@ body {
 .back{
   display: block;
   margin-right: auto;
+  text-decoration: none;
 }
 .game-list {
   list-style: none;
