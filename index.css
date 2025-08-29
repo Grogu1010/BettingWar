@@ -1,3 +1,41 @@
-body{
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #e1e2e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.game-list {
+  list-style: none;
+  padding: 0;
+}
+
+.game-list li {
+  margin: 0.5rem 0;
+}
+
+.game-list a {
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.game-list a:hover {
+  background-color: #f0f0f0;
 }
