@@ -7,7 +7,10 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-
+.header{
+  background-color: #cfd0d1;
+  display: block;
+}
 .container {
   text-align: center;
 }
