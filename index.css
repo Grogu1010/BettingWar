@@ -9,7 +9,9 @@ body {
 }
 .header{
   background-color: #cfd0d1;
-  display: block;
+  display: flex;
+  justify-content: left;
+  align-items: left;
 }
 .container {
   text-align: center;
