@@ -7,4 +7,8 @@ const cad = new Image(); cad.src = 'cards/ace_of_diamonds.png';
 const cah = new Image(); cah.src = 'cards/ace_of_hearts.png';
 const cas = new Image(); cas.src = 'cards/ace_of_spades.png';
 
-ctx.drawImage(cas, 0, 0, 100, 100);
+
+function a(){
+  ctx.drawImage(cas, 0, 0, 100, 200);
+}
+setTimeout(a, 2000);
