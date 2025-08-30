@@ -11,4 +11,4 @@ const cas = new Image(); cas.src = 'cards/ace_of_spades.png';
 function a(){
   ctx.drawImage(cas, 0, 0, 100, 200);
 }
-setTimeout(a, 2000);
+setTimeout(a, 0);
