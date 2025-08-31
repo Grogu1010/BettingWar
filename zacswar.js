@@ -19,15 +19,15 @@ class Card{
     this.faceup = false;
   }
   flipCard(){
-    if(this.faceup == false){faceup = true;}
-    else{{faceup = false;}}
+    if(this.faceup == false){this.faceup = true;}
+    else{{fthis.aceup = false;}}
   }
   drawCard(){
     if(faceup = true){
-      ctx.drawImage(this.image, this.posX, this.posY, cardw * scale, cardh * scale);
+      ctx.drawImage(this.image, this.posX, this.posY, cardw * this.scale, cardh * this.scale);
     }
     else{
-      ctx.drawImage(faceDown, this.posX, this.posY, cardw * scale, cardh * scale);
+      ctx.drawImage(faceDown, this.posX, this.posY, cardw * this.scale, cardh * this.scale);
     }
   }
 }
