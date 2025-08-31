@@ -37,7 +37,7 @@ card1.number = 0;
 card1.image = cas;
 card1.posX = 0;
 card1.posY = 0;
-card1.scale = 1;
+card1.scale = 0.2;
 
 console.log(card1.posX);
 console.log(card1.posY);
