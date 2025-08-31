@@ -12,7 +12,7 @@ const cardw = 500;
 const cardh = 726;
 
 class Card{
-  constructor(int num, Image image, float scale){
+  constructor(int num, Image image, float posX, float posY, float scale){
     this.num = num;
     this.image = image;
     this.scale = scale;
@@ -24,17 +24,18 @@ class Card{
   }
   drawCard(){
     if(faceup = true){
-      ctx.drawImage(this.image, 0, 0, cardw * 0.25, cardh * 0.25);
+      ctx.drawImage(this.image, this.posX, this.posY, cardw * scale, cardh * scale);
     }
     else{
-      ctx.drawImage(faceDown, 0, 0, cardw * 0.25, cardh * 0.25);
+      ctx.drawImage(faceDown, this.posX, this.posY, cardw * scale, cardh * scale);
     }
   }
 }
 
-var card1 = new Card(0, cas, 1);
+var card1 = new Card(0, cas, 0, 0, 1);
 
 function a(){
-  ctx.drawImage(cas, 0, 0, cardw * 0.25, cardh * 0.25);
+  card1.flipCard();
+  card1.drawCard();
 }
 setTimeout(a, 1000);
