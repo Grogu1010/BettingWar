@@ -12,8 +12,8 @@ const cardw = 500;
 const cardh = 726;
 
 class Card{
-  constructor(int num, Image image, float posX, float posY, float scale){
-    this.num = num;
+  constructor(int number, Image image, float posX, float posY, float scale){
+    this.number = number;
     this.image = image;
     this.scale = scale;
     this.faceup = false;
