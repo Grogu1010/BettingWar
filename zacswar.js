@@ -20,10 +20,10 @@ class Card{
   }
   flipCard(){
     if(this.faceup == false){this.faceup = true;}
-    else{{fthis.aceup = false;}}
+    else{{this.aceup = false;}}
   }
   drawCard(){
-    if(faceup = true){
+    if(this.faceup = true){
       ctx.drawImage(this.image, this.posX, this.posY, cardw * this.scale, cardh * this.scale);
     }
     else{
