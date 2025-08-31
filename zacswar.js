@@ -33,11 +33,11 @@ class Card{
 }
 
 const card1 = new Card(0, cas, 0, 0, 1);
-/*card1.number = 0;
+card1.number = 0;
 card1.image = cas;
 card1.posX = 0;
 card1.posY = 0;
-card1.scale = 0.2;*/
+card1.scale = 0.2;
 
 console.log(card1.posX);
 console.log(card1.posY);
