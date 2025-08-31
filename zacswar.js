@@ -38,13 +38,16 @@ card1.image = cas;
 card1.posX = 0;
 card1.posY = 0;
 card1.scale = 0.2;
-
-console.log(card1.posX);
-console.log(card1.posY);
-console.log(card1.scale);
+const card2 = new Card(0, cas, 0, 0, 1);
+card1.number = 1;
+card1.image = cac;
+card1.posX = 200;
+card1.posY = 0;
+card1.scale = 0.2;
 
 function a(){
-  //card1.flipCard();
+  card2.flipCard();
   card1.drawCard();
+  card2.drawCard();
 }
 setTimeout(a, 1000);
