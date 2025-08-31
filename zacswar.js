@@ -39,6 +39,10 @@ card1.posX = 0;
 card1.posY = 0;
 card1.scale = 1;
 
+console.log(card1.posX);
+console.log(card1.posY);
+console.log(card1.scale);
+
 function a(){
   card1.flipCard();
   card1.drawCard();
