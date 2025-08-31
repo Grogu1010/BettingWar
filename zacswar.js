@@ -39,11 +39,11 @@ card1.posX = 0;
 card1.posY = 0;
 card1.scale = 0.2;
 const card2 = new Card(0, cas, 0, 0, 1);
-card1.number = 1;
-card1.image = cac;
-card1.posX = 200;
-card1.posY = 0;
-card1.scale = 0.2;
+card2.number = 1;
+card2.image = cac;
+card2.posX = 200;
+card2.posY = 0;
+card2.scale = 0.2;
 
 function a(){
   card2.flipCard();
