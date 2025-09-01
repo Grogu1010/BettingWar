@@ -14,7 +14,7 @@ const cardw = 500;
 const cardh = 726;
 
 class Card{
-  constructor(number, image, posX, posY, scale){
+  constructor(number, image, posX, posY, scale, faceup){
     this.number = number;
     this.image = image;
     this.scale = scale;
@@ -34,13 +34,13 @@ class Card{
   }
 }
 
-const card1 = new Card(0, cas, 0, 0, 1);
+const card1 = new Card(0, cas, 0, 0, 1, true);
 card1.number = 0;
 card1.image = cas;
 card1.posX = 0;
 card1.posY = 0;
 card1.scale = 0.2;
-const card2 = new Card(0, cas, 0, 0, 1);
+const card2 = new Card(0, cas, 0, 0, 1, false);
 card2.number = 1;
 card2.image = cac;
 card2.posX = 200;
@@ -49,7 +49,6 @@ card2.scale = 0.2;
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  card2.faceup = false;
   card1.drawCard();
   card2.drawCard();
 }
