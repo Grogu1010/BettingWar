@@ -51,6 +51,7 @@ function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   card1.drawCard();
   card2.drawCard();
+  card1.posX += 10;
 }
 function reset(){
   
