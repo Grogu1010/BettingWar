@@ -22,7 +22,7 @@ class Card{
   }
   flipCard(){
     if(this.faceup == false){this.faceup = true;}
-    else{{this.aceup = false;}}
+    else{{this.faceup = false;}}
   }
   drawCard(){
     if(this.faceup = true){
@@ -49,10 +49,12 @@ card2.scale = 0.2;
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  card2.flipCard();
+  card2.faceup = false;
   card1.drawCard();
   card2.drawCard();
-  card2.posX -= 10;
+}
+function reset(){
+  
 }
 
 loopid = setInterval(draw, loopspeed);
