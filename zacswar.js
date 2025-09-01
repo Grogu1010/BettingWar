@@ -41,12 +41,14 @@ card1.image = cas;
 card1.posX = 0;
 card1.posY = 0;
 card1.scale = 0.2;
-const card2 = new Card(0, cas, 0, 0, 1, false);
+card1.faceup = true;
+const card2 = new Card(0, cac, 0, 0, 1, false);
 card2.number = 1;
 card2.image = cac;
 card2.posX = 200;
 card2.posY = 0;
 card2.scale = 0.2;
+card2.faceup = alse;
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
