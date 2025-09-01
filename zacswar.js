@@ -7,7 +7,7 @@ const faceDown = new Image(); faceDown.src = 'back.png';
 // card pngs are 500 x 726
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-
+const loopspeed = 1000;
 const cardw = 500;
 const cardh = 726;
 
@@ -45,9 +45,12 @@ card2.posX = 200;
 card2.posY = 0;
 card2.scale = 0.2;
 
-function a(){
+function draw(){
   card2.flipCard();
   card1.drawCard();
   card2.drawCard();
+  card2.posX -= 10;
 }
-setTimeout(a, 1000);
+
+loopid = setInterval(draw, loopspeed);
+reset();
