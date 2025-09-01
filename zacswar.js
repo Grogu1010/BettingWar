@@ -2,7 +2,7 @@ const cac = new Image(); cac.src = 'cards/ace_of_clubs.png';
 const cad = new Image(); cad.src = 'cards/ace_of_diamonds.png';
 const cah = new Image(); cah.src = 'cards/ace_of_hearts.png';
 const cas = new Image(); cas.src = 'cards/ace_of_spades.png';
-const faceDown = new Image(); faceDown.src = 'back2.png';
+const cfd = new Image(); cfd.src = 'back2.png';
 // Byron Knoll: http://code.google.com/p/vector-playing-cards/
 // card pngs are 500 x 726
 const canvas = document.getElementById('canvas');
@@ -29,7 +29,7 @@ class Card{
       ctx.drawImage(this.image, this.posX, this.posY, cardw * this.scale, cardh * this.scale);
     }
     else{
-      ctx.drawImage(faceDown, this.posX, this.posY, cardw * this.scale, cardh * this.scale);
+      ctx.drawImage(cfd, this.posX, this.posY, cardw * this.scale, cardh * this.scale);
     }
   }
 }
