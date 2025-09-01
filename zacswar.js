@@ -7,7 +7,9 @@ const faceDown = new Image(); faceDown.src = 'back.png';
 // card pngs are 500 x 726
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const loopspeed = 1000;
+
+var loopid;
+var loopspeed = 1000;
 const cardw = 500;
 const cardh = 726;
 
