@@ -13,6 +13,7 @@ var loopid;
 var loopspeed = 1000;
 const cardw = 500;
 const cardh = 726;
+var players = 1;
 
 class Card{
   constructor(number, image, posX, posY, scale, faceup){
@@ -49,6 +50,10 @@ card2.posX = 200;
 card2.posY = 0;
 card2.scale = 0.2;
 card2.faceup = false;
+
+var sprites = [];
+
+sprites[0] = new Card(0, cas, 0, 0, 1, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
