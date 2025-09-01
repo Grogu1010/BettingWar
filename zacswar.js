@@ -48,6 +48,7 @@ card2.posY = 0;
 card2.scale = 0.2;
 
 function draw(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   card2.flipCard();
   card1.drawCard();
   card2.drawCard();
