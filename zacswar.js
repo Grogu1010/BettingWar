@@ -5,6 +5,7 @@ const cas = new Image(); cas.src = 'cards/ace_of_spades.png';
 const cfd = new Image(); cfd.src = 'back2.png';
 // Byron Knoll: http://code.google.com/p/vector-playing-cards/
 // card pngs are 500 x 726
+// ctx.drawImage(cfd, card1.posX, card1.posY, cardw * card1.scale, cardh * card1.scale);
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -25,7 +26,7 @@ class Card{
     else{{this.faceup = false;}}
   }
   drawCard(){
-    if(this.faceup = true){
+    if(this.faceup == true){
       ctx.drawImage(this.image, this.posX, this.posY, cardw * this.scale, cardh * this.scale);
     }
     else{
