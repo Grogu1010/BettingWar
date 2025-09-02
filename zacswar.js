@@ -57,7 +57,7 @@ sprites[0] = new Card(0, cas, 0, 0, 1, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  players = document.getElementById('Players');
+  players = document.getElementById('Players').value;
   card1.drawCard();
   card2.drawCard();
   card1.posX += 10;
