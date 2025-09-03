@@ -49,6 +49,8 @@ sprites[1] = new Card(cac, 0, 0, 1, 1, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   players = document.getElementById('Players').value;
   sprites[0].drawCard();
   sprites[1].drawCard();
