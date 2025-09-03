@@ -44,8 +44,8 @@ class Card{
 
 var sprites = [];
 
-sprites[0] = new Card(0, cas, 0, 0, 1, true);
-sprites[1] = new Card(0, cac, 0, 0, 1, false);
+sprites[0] = new Card(0, cas, 0, 0, 1, 1, true);
+sprites[1] = new Card(0, cac, 0, 0, 1, 1, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -55,19 +55,21 @@ function draw(){
   sprites[0].posX += 10;
 }
 function reset(){
-  sprites[0] = new Card(0, cas, 0, 0, 1, true);
+  sprites[0] = new Card(0, cas, 0, 0, 1, 1, true);
   sprites[0].number = 0;
   sprites[0].image = cas;
   sprites[0].posX = 0;
   sprites[0].posY = 0;
-  sprites[0].scaleX = sprites[1].scaleY = 0.2;
+  sprites[0].scaleX = 0.2;
+  sprites[1].scaleY = 0.2;
   sprites[0].faceup = true;
-  sprites[1] = new Card(0, cac, 0, 0, 1, false);
+  sprites[1] = new Card(0, cac, 0, 0, 1, 1, false);
   sprites[1].number = 1;
   sprites[1].image = cac;
   sprites[1].posX = 200;
   sprites[1].posY = 0;
-  sprites[1].scaleX = sprites[1].scaleY = 0.2;
+  sprites[1].scaleX = 0.2;
+  sprites[1].scaleY = 0.2;
   sprites[1].faceup = false;
 }
 
