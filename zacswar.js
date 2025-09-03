@@ -52,27 +52,16 @@ function draw(){
   ctx.fillStyle = 'white';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   players = document.getElementById('Players').value;
-  sprites[0].drawCard();
-  sprites[1].drawCard();
-  sprites[0].posX += 10;
+  for (let i = 0; i < sprtites.length; i++) {
+    sprites[i].drawCard();
+  }
+  //sprites[0].posX += 10;
 }
 function reset(){
   if(players == 2){
     sprites[0] = new Card(cas, 0, 0, 0.2, 0.2, true);
-    sprites[0].faceup = true;
-    /*sprites[0].image = cas;
-    sprites[0].posX = 2;
-    sprites[0].posY = 0;
-    sprites[0].scaleX = 0.2;
-    sprites[1].scaleY = 0.2;
-    sprites[0].faceup = true;*/
+    //sprites[0].faceup = true;
     sprites[1] = new Card(cac, 200, 0, 0.2, 0.2, false);
-    /*sprites[1].image = cac;
-    sprites[1].posX = 200;
-    sprites[1].posY = 0;
-    sprites[1].scaleX = 0.2;
-    sprites[1].scaleY = 0.2;
-    sprites[1].faceup = false;*/
   }
   else if(players == 3){
     
