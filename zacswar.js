@@ -13,6 +13,7 @@ var loopid;
 var loopspeed = 1000;
 const cardw = 500;
 const cardh = 726;
+const bgcolor = 'green';
 var players = 2;
 var game = "classic";
 
@@ -49,7 +50,7 @@ sprites[1] = new Card(cac, 0, 0, 1, 1, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = 'white';
+  ctx.fillStyle = bgcolor;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   players = document.getElementById('Players').value;
   for (let i = 0; i < sprtites.length; i++) {
