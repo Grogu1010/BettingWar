@@ -60,7 +60,7 @@ function reset(){
   sprites[0].image = cas;
   sprites[0].posX = 0;
   sprites[0].posY = 0;
-  sprites[0].scaleX = card1.scaleY = 0.2;
+  sprites[0].scaleX = sprites[1]..scaleY = 0.2;
   sprites[0].faceup = true;
   sprites[1] = new Card(0, cac, 0, 0, 1, false);
   sprites[1].number = 1;
