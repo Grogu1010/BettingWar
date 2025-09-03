@@ -55,20 +55,28 @@ function draw(){
   sprites[0].posX += 10;
 }
 function reset(){
-  sprites[0] = new Card(cas, 0, 0, 1, 1, true);
-  sprites[0].image = cas;
-  sprites[0].posX = 0;
-  sprites[0].posY = 0;
-  sprites[0].scaleX = 0.2;
-  sprites[1].scaleY = 0.2;
-  sprites[0].faceup = true;
-  sprites[1] = new Card(cac, 0, 0, 1, 1, false);
-  sprites[1].image = cac;
-  sprites[1].posX = 200;
-  sprites[1].posY = 0;
-  sprites[1].scaleX = 0.2;
-  sprites[1].scaleY = 0.2;
-  sprites[1].faceup = false;
+  if(players == 2){
+    sprites[0] = new Card(cas, 0, 0, 0.2, 1, true);
+    /*sprites[0].image = cas;
+    sprites[0].posX = 2;
+    sprites[0].posY = 0;
+    sprites[0].scaleX = 0.2;
+    sprites[1].scaleY = 0.2;
+    sprites[0].faceup = true;*/
+    sprites[1] = new Card(cac, 0, 0, 1, 1, false);
+    /*sprites[1].image = cac;
+    sprites[1].posX = 200;
+    sprites[1].posY = 0;
+    sprites[1].scaleX = 0.2;
+    sprites[1].scaleY = 0.2;
+    sprites[1].faceup = false;*/
+  }
+  else if(players == 3){
+    
+  }
+  else if(player == 4){
+    
+  }
 }
 
 loopid = setInterval(draw, loopspeed);
