@@ -57,6 +57,7 @@ function draw(){
 function reset(){
   if(players == 2){
     sprites[0] = new Card(cas, 0, 0, 0.2, 0.2, true);
+    sprites[0].faceup = true;
     /*sprites[0].image = cas;
     sprites[0].posX = 2;
     sprites[0].posY = 0;
