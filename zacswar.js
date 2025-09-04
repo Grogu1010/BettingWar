@@ -9,6 +9,8 @@ const cfd = new Image(); cfd.src = 'back2.png'; // card face down
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
+const TO_RAD = Math.PI / 180;
+
 var loopid;
 var loopspeed = 1000;
 const cardw = 500;
@@ -31,12 +33,32 @@ class Card{
     else{this.faceup = true;}
   }
   drawCard(){
+    rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY,)
+    /*
+    ctx.save();
+    ctx.translate(this.posX, this.posY);
+    ctx.rotate(angle);
+    ctx.translate(-x,-y);
     if(this.faceup){
       ctx.drawImage(this.image, this.posX, this.posY, cardw * this.scaleX, cardh * this.scaleY);
     }
     else{
       ctx.drawImage(cfd, this.posX, this.posY, cardw * this.scaleX, cardh * this.scaleY);
     }
+    ctx.restore();*/
+  }
+  rotateAndPaintImage ( context, image, angleInRad , positionX, positionY, axisX, axisY ) {
+    context.translate( positionX, positionY );
+    context.rotate( angleInRad );
+    context.drawImage( image, -axisX, -axisY );
+    if(this.faceup){
+      ctx.drawImage(image, -axisX, -axisY, cardw * this.scaleX, cardh * this.scaleY);
+    }
+    else{
+      ctx.drawImage(cfd, -axisX, -axisY, cardw * this.scaleX, cardh * this.scaleY);
+    }
+    context.rotate( -angleInRad );
+    context.translate( -positionX, -positionY );
   }
 }
 
