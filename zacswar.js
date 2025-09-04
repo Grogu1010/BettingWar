@@ -19,20 +19,21 @@ class Card{
     else{this.faceup = true;}
   }
   drawCard(){
-    rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY, this.posX + cardw * this.scaleX, this.posY + cardh * this.scaleY);
+    //rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY, this.posX + cardw * this.scaleX, this.posY + cardh * this.scaleY);
   }
-  rotateAndPaintImage(context, image, angleInRad, positionX, positionY, axisX, axisY){
-    context.translate( positionX, positionY );
-    context.rotate( angleInRad );
-    //context.drawImage( image, -axisX, -axisY );
+  rotateAndPaintImage(){
+    ctx.save();
+    ctx.translate(this.posX, this.posY);
+    ctx.rotate(this.rotation);
+    ctx.translate(-((cardw * scaleX) / 2),-((cardh * scaleY) / 2));
+    ctx.drawImage(this.image, 0, 0);
     if(this.faceup){
-      context.drawImage(image, -axisX, -axisY, cardw * this.scaleX, cardh * this.scaleY);
+      context.drawImage(image, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
     else{
-      context.drawImage(cfd, -axisX, -axisY, cardw * this.scaleX, cardh * this.scaleY);
+      context.drawImage(cfd, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
-    context.rotate(-angleInRad);
-    context.translate(-positionX, -positionY);
+    ctx.restore();
   }
 }
 // Byron Knoll: http://code.google.com/p/vector-playing-cards/
