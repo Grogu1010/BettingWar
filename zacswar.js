@@ -19,6 +19,11 @@ const bgcolor = 'green';
 var players = 2;
 var game = "classic";
 
+var sprites = [];
+
+sprites[0] = new Card(cas, 0, 0, 1, 1, 0, true);
+sprites[1] = new Card(cac, 0, 0, 1, 1, 90, false);
+
 class Card{
   constructor(image, posX, posY, scaleX, scaleY, rotation, faceup){
     this.image = image;
@@ -34,19 +39,7 @@ class Card{
     else{this.faceup = true;}
   }
   drawCard(){
-    rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY,)
-    /*
-    ctx.save();
-    ctx.translate(this.posX, this.posY);
-    ctx.rotate(angle);
-    ctx.translate(-x,-y);
-    if(this.faceup){
-      ctx.drawImage(this.image, this.posX, this.posY, cardw * this.scaleX, cardh * this.scaleY);
-    }
-    else{
-      ctx.drawImage(cfd, this.posX, this.posY, cardw * this.scaleX, cardh * this.scaleY);
-    }
-    ctx.restore();*/
+    rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY,);
   }
   rotateAndPaintImage ( context, image, angleInRad , positionX, positionY, axisX, axisY ) {
     context.translate( positionX, positionY );
@@ -63,13 +56,7 @@ class Card{
   }
 }
 
-//const card1 = new Card(0, cas, 0, 0, 1, true);
-//const card2 = new Card(0, cac, 0, 0, 1, false);
 
-var sprites = [];
-
-sprites[0] = new Card(cas, 0, 0, 1, 1, 0, true);
-sprites[1] = new Card(cac, 0, 0, 1, 1, 90, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
