@@ -52,6 +52,7 @@ function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = bgcolor;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = 'white';
   players = document.getElementById('Players').value;
   for (let i = 0; i < sprtites.length; i++) {
     sprites[i].drawCard();
