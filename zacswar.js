@@ -63,7 +63,7 @@ function draw(){
   ctx.fillStyle = 'white';
   players = document.getElementById('Players').value;
   for (let i = 0; i < sprites.length; i++) {
-    sprites[i].rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY);
+    sprites[i].rotateAndPaintImage();
   }
 }
 function reset(){
