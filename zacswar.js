@@ -18,9 +18,9 @@ class Card{
     if(this.faceup){this.faceup = false;}
     else{this.faceup = true;}
   }
-  /*drawCard(){
-    rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY);
-  }*/
+  drawCard(){
+    rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY, this.posX + cardw * this.scaleX, this.posY + cardh * this.scaleY);
+  }
   rotateAndPaintImage(context, image, angleInRad, positionX, positionY, axisX, axisY){
     ctx.translate( positionX, positionY );
     ctx.rotate( angleInRad );
