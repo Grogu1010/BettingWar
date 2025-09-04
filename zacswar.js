@@ -22,17 +22,17 @@ class Card{
     rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY, this.posX + cardw * this.scaleX, this.posY + cardh * this.scaleY);
   }
   rotateAndPaintImage(context, image, angleInRad, positionX, positionY, axisX, axisY){
-    ctx.translate( positionX, positionY );
-    ctx.rotate( angleInRad );
+    context.translate( positionX, positionY );
+    context.rotate( angleInRad );
     //context.drawImage( image, -axisX, -axisY );
     if(this.faceup){
-      ctx.drawImage(image, -axisX, -axisY, cardw * this.scaleX, cardh * this.scaleY);
+      context.drawImage(image, -axisX, -axisY, cardw * this.scaleX, cardh * this.scaleY);
     }
     else{
-      ctx.drawImage(cfd, -axisX, -axisY, cardw * this.scaleX, cardh * this.scaleY);
+      context.drawImage(cfd, -axisX, -axisY, cardw * this.scaleX, cardh * this.scaleY);
     }
-    ctx.rotate(-angleInRad);
-    ctx.translate(-positionX, -positionY);
+    context.rotate(-angleInRad);
+    context.translate(-positionX, -positionY);
   }
 }
 // Byron Knoll: http://code.google.com/p/vector-playing-cards/
