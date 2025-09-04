@@ -20,13 +20,14 @@ var players = 2;
 var game = "classic";
 
 class Card{
-  constructor(image, posX, posY, scaleX, scaleY, faceup){
+  constructor(image, posX, posY, scaleX, scaleY, rotation, faceup){
     this.image = image;
     this.posX = posX;
     this.posY = posY;
     this.scaleX = scaleX;
     this.scaleY = scaleY;
-    this.faceup = false;
+    this.rotation = rotation;
+    this.faceup = faceup;
   }
   flipCard(){
     if(this.faceup){this.faceup = false;}
@@ -67,8 +68,8 @@ class Card{
 
 var sprites = [];
 
-sprites[0] = new Card(cas, 0, 0, 1, 1, true);
-sprites[1] = new Card(cac, 0, 0, 1, 1, false);
+sprites[0] = new Card(cas, 0, 0, 1, 1, 0, true);
+sprites[1] = new Card(cac, 0, 0, 1, 1, 90, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
