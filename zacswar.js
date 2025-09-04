@@ -3,26 +3,6 @@ const cad = new Image(); cad.src = 'cards/ace_of_diamonds.png';
 const cah = new Image(); cah.src = 'cards/ace_of_hearts.png';
 const cas = new Image(); cas.src = 'cards/ace_of_spades.png';
 const cfd = new Image(); cfd.src = 'back2.png'; // card face down
-// Byron Knoll: http://code.google.com/p/vector-playing-cards/
-// card pngs are 500 x 726
-// ctx.drawImage(cfd, card1.posX, card1.posY, cardw * card1.scale, cardh * card1.scale);
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
-const TO_RAD = Math.PI / 180;
-
-var loopid;
-var loopspeed = 1000;
-const cardw = 500;
-const cardh = 726;
-const bgcolor = 'green';
-var players = 2;
-var game = "classic";
-
-var sprites = [];
-
-sprites[0] = new Card(cas, 0, 0, 1, 1, 0, true);
-sprites[1] = new Card(cac, 0, 0, 1, 1, 90, false);
 
 class Card{
   constructor(image, posX, posY, scaleX, scaleY, rotation, faceup){
@@ -55,8 +35,25 @@ class Card{
     context.translate( -positionX, -positionY );
   }
 }
+// Byron Knoll: http://code.google.com/p/vector-playing-cards/
+// card pngs are 500 x 726
+// ctx.drawImage(cfd, card1.posX, card1.posY, cardw * card1.scale, cardh * card1.scale);
 
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
+const TO_RAD = Math.PI / 180;
+var loopid;
+var loopspeed = 1000;
+const cardw = 500;
+const cardh = 726;
+const bgcolor = 'green';
+var players = 2;
+var game = "classic";
+
+var sprites = [];
+sprites[0] = new Card(cas, 0, 0, 1, 1, 0, true);
+sprites[1] = new Card(cac, 0, 0, 1, 1, 90, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
