@@ -18,21 +18,21 @@ class Card{
     if(this.faceup){this.faceup = false;}
     else{this.faceup = true;}
   }
-  drawCard(){
+  /*drawCard(){
     rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY);
-  }
-  rotateAndPaintImage ( context, image, angleInRad , positionX, positionY, axisX, axisY ) {
-    context.translate( positionX, positionY );
-    context.rotate( angleInRad );
-    context.drawImage( image, -axisX, -axisY );
+  }*/
+  rotateAndPaintImage(context, image, angleInRad, positionX, positionY, axisX, axisY){
+    ctx.translate( positionX, positionY );
+    ctx.rotate( angleInRad );
+    //context.drawImage( image, -axisX, -axisY );
     if(this.faceup){
       ctx.drawImage(image, -axisX, -axisY, cardw * this.scaleX, cardh * this.scaleY);
     }
     else{
       ctx.drawImage(cfd, -axisX, -axisY, cardw * this.scaleX, cardh * this.scaleY);
     }
-    context.rotate( -angleInRad );
-    context.translate( -positionX, -positionY );
+    ctx.rotate(-angleInRad);
+    ctx.translate(-positionX, -positionY);
   }
 }
 // Byron Knoll: http://code.google.com/p/vector-playing-cards/
@@ -62,7 +62,7 @@ function draw(){
   ctx.fillStyle = 'white';
   players = document.getElementById('Players').value;
   for (let i = 0; i < sprites.length; i++) {
-    sprites[i].drawCard();
+    sprites[i].rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY);
   }
 }
 function reset(){
