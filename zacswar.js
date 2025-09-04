@@ -39,7 +39,7 @@ class Card{
     else{this.faceup = true;}
   }
   drawCard(){
-    rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY,);
+    rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY);
   }
   rotateAndPaintImage ( context, image, angleInRad , positionX, positionY, axisX, axisY ) {
     context.translate( positionX, positionY );
@@ -64,10 +64,9 @@ function draw(){
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = 'white';
   players = document.getElementById('Players').value;
-  for (let i = 0; i < sprtites.length; i++) {
+  for (let i = 0; i < sprites.length; i++) {
     sprites[i].drawCard();
   }
-  //sprites[0].posX += 10;
 }
 function reset(){
   if(players == 2){
