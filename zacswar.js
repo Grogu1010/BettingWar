@@ -58,8 +58,8 @@ sprites[1] = new Card(cac, 10, 10, 1, 1, 90, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  //ctx.fillStyle = bgcolor;
-  //ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = bgcolor;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   players = document.getElementById('Players').value;
   for (let i = 0; i < sprites.length; i++) {
     sprites[i].rotateAndPaintImage();
