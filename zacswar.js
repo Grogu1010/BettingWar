@@ -63,6 +63,8 @@ var game = "classic";
 var sprites = [];//always start rotation at 0
 sprites[0] = new Card(cas, 0, 0, 0, 0, 0, false);
 sprites[1] = new Card(cas, 0, 0, 0, 0, 0, false);
+sprites[2] = new Card(cas, 0, 0, 0, 0, 0, false);
+sprites[3] = new Card(cas, 0, 0, 0, 0, 0, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
