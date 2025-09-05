@@ -25,7 +25,7 @@ class Card{
     ctx.save();
     ctx.translate(this.posX, this.posY);
     ctx.rotate(this.rotation * TO_RAD);
-    ctx.translate(-((cardw * this.scaleX) / 2),-((cardh * this.scaleY) / 2));
+    //ctx.translate(-((cardw * this.scaleX) / 2),-((cardh * this.scaleY) / 2));
     //ctx.drawImage(this.image, 0, 0);
     if(this.faceup){
       ctx.drawImage(image, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
