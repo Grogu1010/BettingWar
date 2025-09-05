@@ -49,9 +49,9 @@ const bgcolor = 'green';
 var players = 2;
 var game = "classic";
 
-var sprites = [];
+var sprites = [];//always start rotation at 0
 sprites[0] = new Card(cas, 0, 0, 1, 1, 0, true);
-sprites[1] = new Card(cac, 10, 10, 1, 1, 90, false);
+sprites[1] = new Card(cac, 10, 10, 1, 1, 0, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -62,6 +62,7 @@ function draw(){
     sprites[i].drawCard();
   }
   sprites[0].faceup = true;
+  sprites[0].rotation = 90;
   sprites[1].rotation += 1;
 }
 function reset(){
