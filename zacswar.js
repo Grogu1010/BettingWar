@@ -35,7 +35,7 @@ class Card{
 }
 // Byron Knoll: http://code.google.com/p/vector-playing-cards/
 // card pngs are 500 x 726
-// ctx.drawImage(cfd, card1.posX, card1.posY, cardw * card1.scale, cardh * card1.scale);
+
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -62,6 +62,7 @@ function draw(){
     sprites[i].drawCard();
   }
   sprites[0].faceup = true;
+  sprites[1].rotation += 1;
 }
 function reset(){
   if(players == 2){
