@@ -26,12 +26,12 @@ class Card{
     ctx.translate(this.posX, this.posY);
     ctx.rotate(this.rotation);
     ctx.translate(-((cardw * scaleX) / 2),-((cardh * scaleY) / 2));
-    ctx.drawImage(this.image, 0, 0);
+    //ctx.drawImage(this.image, 0, 0);
     if(this.faceup){
-      context.drawImage(image, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
+      ctx.drawImage(image, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
     else{
-      context.drawImage(cfd, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
+      cotx.drawImage(cfd, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
     ctx.restore();
   }
@@ -58,9 +58,8 @@ sprites[1] = new Card(cac, 0, 0, 1, 1, 90, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = bgcolor;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = 'white';
+  //ctx.fillStyle = bgcolor;
+  //ctx.fillRect(0, 0, canvas.width, canvas.height);
   players = document.getElementById('Players').value;
   for (let i = 0; i < sprites.length; i++) {
     sprites[i].rotateAndPaintImage();
