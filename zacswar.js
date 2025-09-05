@@ -108,5 +108,11 @@ function reset(){
   }
 }
 
+function flipAll(){
+  for (let i = 0; i < sprites.length; i++) {
+    sprites[i].flipCard();
+  }
+}
+
 loopid = setInterval(draw, loopspeed);
 reset();
