@@ -35,10 +35,17 @@ class Card{
 }
 // Byron Knoll: http://code.google.com/p/vector-playing-cards/
 // card pngs are 500 x 726
-
-
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+
+const dpr = window.devicePixelRatio || 1;
+const baseCanvasWidth = canvas.width;
+const baseCanvasHeight = canvas.height;
+canvas.style.width = baseCanvasWidth + 'px';
+canvas.style.height = baseCanvasHeight + 'px';
+canvas.width = baseCanvasWidth * dpr;
+canvas.height = baseCanvasHeight * dpr;
+ctx.scale(dpr, dpr);
 
 const TO_RAD = Math.PI / 180;
 var loopid;
