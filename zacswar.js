@@ -25,7 +25,7 @@ class Card{
     ctx.translate(-(cardw * this.scaleX / 2), -(cardh * this.scaleY) / 2);
     //ctx.drawImage(this.image, 0, 0);
     if(this.faceup){
-      ctx.drawImage(image, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
+      ctx.drawImage(this.image, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
     else{
       ctx.drawImage(cfd, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
