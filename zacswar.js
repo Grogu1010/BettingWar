@@ -88,7 +88,7 @@ function reset(){
     sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false);
     sprites[2] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false);
   }
-  else if(player == 4){
+  else if(players == 4){
     sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false);
     sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false);
     sprites[2] = new Card(cac, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false);
