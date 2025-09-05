@@ -50,8 +50,8 @@ var players = 2;
 var game = "classic";
 
 var sprites = [];//always start rotation at 0
-sprites[0] = new Card(cas, 0, 0, 0.2, 0.2, 0, true);
-sprites[1] = new Card(cac, 10, 10, 1, 1, 0, false);
+sprites[0] = new Card(cas, 0, 0, 0, 0, 0, false);
+sprites[1] = new Card(cas, 0, 0, 0, 0, 0, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -67,7 +67,7 @@ function draw(){
 }
 function reset(){
   if(players == 2){
-    sprites[0] = new Card(cas, 50, 50, 0.2, 0.2, true);
+    sprites[0] = new Card(cas, 50, 50, 0.1, 0.1, true);
     sprites[1] = new Card(cac, 200, 50, 0.2, 0.2, false);
   }
   else if(players == 3){
