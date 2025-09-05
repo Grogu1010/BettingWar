@@ -60,6 +60,7 @@ const cardw = 500;
 const cardh = 726;
 const bgcolor = 'green';
 var players = 2;
+var lastplayers;
 var game = "classic";
 
 var sprites = [];//always start rotation at 0
@@ -73,16 +74,20 @@ function draw(){
   ctx.fillStyle = bgcolor;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   players = document.getElementById('Players').value;
+  if(players != lastplayers){
+    reset();
+  }
+  
   for (let i = 0; i < sprites.length; i++) {
     if(sprites[i].visible){
       sprites[i].drawCard();
     }
   }
-  
-  //sprites[1].rotation += 1;
+  lastplayers = players;
 }
 function reset(){
   players = document.getElementById('Players').value;
+  lastplayers = players;
   if(players == 2){
     sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false);
     sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false);
