@@ -72,14 +72,13 @@ function draw(){
   for (let i = 0; i < sprites.length; i++) {
     sprites[i].drawCard();
   }
-  sprites[0].faceup = true;
-  sprites[0].rotation = 90;
-  sprites[1].rotation += 1;
+  
+  //sprites[1].rotation += 1;
 }
 function reset(){
   if(players == 2){
-    sprites[0] = new Card(cas, canvas.width / 2, canvas.width * 0.2, 0.25, 0.25, true);
-    sprites[1] = new Card(cac, canvas.width / 2, canvas.width * 0.5, 0.25, 0.25, false);
+    sprites[0] = new Card(cas, canvas.width / 2, canvas.width * 0.2, 0.25, 0.25, 180, true);
+    sprites[1] = new Card(cac, canvas.width / 2, canvas.width * 0.5, 0.25, 0.25, 0, false)
   }
   else if(players == 3){
     
