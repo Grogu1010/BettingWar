@@ -76,6 +76,7 @@ function draw(){
   //sprites[1].rotation += 1;
 }
 function reset(){
+  players = document.getElementById('Players').value;
   if(players == 2){
     sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false);
     sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false);
