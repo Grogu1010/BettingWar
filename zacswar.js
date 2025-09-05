@@ -5,7 +5,7 @@ const cas = new Image(); cas.src = 'cards/ace_of_spades.png';
 const cfd = new Image(); cfd.src = 'back2.png'; // card face down
 
 class Card{
-  constructor(image, posX, posY, scaleX, scaleY, rotation, faceup){
+  constructor(image, posX, posY, scaleX, scaleY, rotation, faceup, visible){
     this.image = image;
     this.posX = posX;
     this.posY = posY;
@@ -13,6 +13,7 @@ class Card{
     this.scaleY = scaleY;
     this.rotation = rotation;
     this.faceup = faceup;
+    this.visible = visible;
   }
   flipCard(){
     if(this.faceup){this.faceup = false;}
@@ -24,10 +25,10 @@ class Card{
     ctx.rotate(this.rotation * TO_RAD);
     ctx.translate(-(cardw * this.scaleX / 2), -(cardh * this.scaleY) / 2);
     //ctx.drawImage(this.image, 0, 0);
-    if(this.faceup){
+    if(this.faceup && this.visible){
       ctx.drawImage(this.image, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
-    else{
+    else if(this.visible){
       ctx.drawImage(cfd, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
     ctx.restore();
