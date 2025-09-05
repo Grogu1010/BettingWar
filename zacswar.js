@@ -64,10 +64,10 @@ var lastplayers;
 var game = "classic";
 
 var sprites = [];//always start rotation at 0
-sprites[0] = new Card(cas, 0, 0, 0, 0, 0, false);
-sprites[1] = new Card(cas, 0, 0, 0, 0, 0, false);
-sprites[2] = new Card(cas, 0, 0, 0, 0, 0, false);
-sprites[3] = new Card(cas, 0, 0, 0, 0, 0, false);
+sprites[0] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+sprites[1] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+sprites[2] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+sprites[3] = new Card(cas, 0, 0, 0, 0, 0, false, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -86,22 +86,25 @@ function draw(){
   lastplayers = players;
 }
 function reset(){
+  for (let i = 0; i < sprites.length; i++) {
+    sprites[i] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+  }
   players = document.getElementById('Players').value;
   lastplayers = players;
   if(players == 2){
-    sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false);
-    sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false);
+    sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
-    sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false);
-    sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false);
-    sprites[2] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false);
+    sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    sprites[2] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 4){
-    sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false);
-    sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false);
-    sprites[2] = new Card(cad, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false);
-    sprites[3] = new Card(cah, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false);
+    sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    sprites[2] = new Card(cad, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+    sprites[3] = new Card(cah, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
   }
 }
 
