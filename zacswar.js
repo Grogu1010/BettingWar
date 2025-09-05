@@ -39,8 +39,8 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const dpr = window.devicePixelRatio || 1;
-const baseCanvasWidth = canvas.width;
-const baseCanvasHeight = canvas.height;
+const baseCanvasWidth = 800;
+const baseCanvasHeight = 600;
 canvas.style.width = baseCanvasWidth + 'px';
 canvas.style.height = baseCanvasHeight + 'px';
 canvas.width = baseCanvasWidth * dpr;
