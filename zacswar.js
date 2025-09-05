@@ -24,11 +24,10 @@ class Card{
     ctx.translate(this.posX, this.posY);
     ctx.rotate(this.rotation * TO_RAD);
     ctx.translate(-(cardw * this.scaleX / 2), -(cardh * this.scaleY) / 2);
-    //ctx.drawImage(this.image, 0, 0);
-    if(this.faceup && this.visible){
+    if(this.faceup){
       ctx.drawImage(this.image, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
-    else if(this.visible){
+    else{
       ctx.drawImage(cfd, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
     ctx.restore();
@@ -75,7 +74,9 @@ function draw(){
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   players = document.getElementById('Players').value;
   for (let i = 0; i < sprites.length; i++) {
-    sprites[i].drawCard();
+    if(sprites[i].visible){
+      sprites[i].drawCard();
+    }
   }
   
   //sprites[1].rotation += 1;
