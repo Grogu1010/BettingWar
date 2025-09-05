@@ -79,7 +79,7 @@ function draw(){
 function reset(){
   if(players == 2){
     sprites[0] = new Card(cas, canvas.width / 2, canvas.width * 0.2, 0.25, 0.25, true);
-    sprites[1] = new Card(cac, canvas.width / 2, canvas.width * 0.8, 0.25, 0.25, false);
+    sprites[1] = new Card(cac, canvas.width / 2, canvas.width * 0.5, 0.25, 0.25, false);
   }
   else if(players == 3){
     
