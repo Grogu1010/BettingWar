@@ -42,7 +42,7 @@ const ctx = canvas.getContext('2d');
 
 const TO_RAD = Math.PI / 180;
 var loopid;
-var loopspeed = 1000;
+var loopspeed = 100;
 const cardw = 500;
 const cardh = 726;
 const bgcolor = 'green';
