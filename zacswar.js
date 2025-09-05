@@ -39,6 +39,8 @@ class Card{
 
 // Byron Knoll: http://code.google.com/p/vector-playing-cards/
 // card pngs are 500 x 726
+// for (let i = 0; i < sprites.length; i++) {sprites[i].flipCard();}
+
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
