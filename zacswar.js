@@ -59,14 +59,13 @@ function draw(){
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   players = document.getElementById('Players').value;
   for (let i = 0; i < sprites.length; i++) {
-    sprites[i].rotateAndPaintImage();
+    sprites[i].drawCard();
   }
   sprites[0].faceup = true;
 }
 function reset(){
   if(players == 2){
     sprites[0] = new Card(cas, 0, 0, 0.2, 0.2, true);
-    sprites[0].faceup = true;
     sprites[1] = new Card(cac, 200, 0, 0.2, 0.2, false);
   }
   else if(players == 3){
