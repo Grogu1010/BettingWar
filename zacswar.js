@@ -39,7 +39,7 @@ class Card{
 
 // Byron Knoll: http://code.google.com/p/vector-playing-cards/
 // card pngs are 500 x 726
-// for (let i = 0; i < sprites.length; i++) {sprites[i].flipCard();}
+// for (let i = 0; i < base.length; i++) {base[i].flipCard();}
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -63,11 +63,11 @@ var players = 2;
 var lastplayers;
 var game = "classic";
 
-var sprites = [];//always start rotation at 0
-sprites[0] = new Card(cas, 0, 0, 0, 0, 0, false, false);
-sprites[1] = new Card(cas, 0, 0, 0, 0, 0, false, false);
-sprites[2] = new Card(cas, 0, 0, 0, 0, 0, false, false);
-sprites[3] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+var base = [];//always start rotation at 0
+base[0] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+base[1] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+base[2] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+base[3] = new Card(cas, 0, 0, 0, 0, 0, false, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -78,39 +78,39 @@ function draw(){
     reset();
   }
   
-  for (let i = 0; i < sprites.length; i++) {
-    if(sprites[i].visible){
-      sprites[i].drawCard();
+  for (let i = 0; i < base.length; i++) {
+    if(base[i].visible){
+      base[i].drawCard();
     }
   }
   lastplayers = players;
 }
 function reset(){
-  for (let i = 0; i < sprites.length; i++) {
-    sprites[i] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+  for (let i = 0; i < base.length; i++) {
+    base[i] = new Card(cas, 0, 0, 0, 0, 0, false, false);
   }
   players = document.getElementById('Players').value;
   lastplayers = players;
   if(players == 2){
-    sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    base[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    base[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
-    sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
-    sprites[2] = new Card(cad, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+    base[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    base[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    base[2] = new Card(cad, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
   }
   else if(players == 4){
-    sprites[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    sprites[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
-    sprites[2] = new Card(cad, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
-    sprites[3] = new Card(cah, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
+    base[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    base[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    base[2] = new Card(cad, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+    base[3] = new Card(cah, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
   }
 }
 
 function flipAll(){
-  for (let i = 0; i < sprites.length; i++) {
-    sprites[i].flipCard();
+  for (let i = 0; i < base.length; i++) {
+    base[i].flipCard();
   }
 }
 
