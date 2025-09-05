@@ -24,7 +24,7 @@ class Card{
   rotateAndPaintImage(){
     ctx.save();
     ctx.translate(this.posX, this.posY);
-    ctx.rotate(this.rotation);
+    ctx.rotate(this.rotation * TO_RAD);
     ctx.translate(-((cardw * this.scaleX) / 2),-((cardh * this.scaleY) / 2));
     //ctx.drawImage(this.image, 0, 0);
     if(this.faceup){
@@ -54,7 +54,7 @@ var game = "classic";
 
 var sprites = [];
 sprites[0] = new Card(cas, 0, 0, 1, 1, 0, true);
-sprites[1] = new Card(cac, 0, 0, 1, 1, 90, false);
+sprites[1] = new Card(cac, 10, 10, 1, 1, 90, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
