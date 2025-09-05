@@ -31,7 +31,7 @@ class Card{
       ctx.drawImage(image, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
     else{
-      cotx.drawImage(cfd, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
+      ctx.drawImage(cfd, 0, 0, cardw * this.scaleX, cardh * this.scaleY);
     }
     ctx.restore();
   }
