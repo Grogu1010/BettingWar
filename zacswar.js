@@ -78,8 +78,8 @@ function draw(){
 }
 function reset(){
   if(players == 2){
-    sprites[0] = new Card(cas, 50, 50, 0.25, 0.25, true);
-    sprites[1] = new Card(cac, canvas.width / 2, 50, 0.5, 0.5, false);
+    sprites[0] = new Card(cas, 100, 100, 0.25, 0.25, true);
+    sprites[1] = new Card(cac, canvas.width / 2, 200, 0.25, 0.25, false);
   }
   else if(players == 3){
     
