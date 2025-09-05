@@ -19,9 +19,6 @@ class Card{
     else{this.faceup = true;}
   }
   drawCard(){
-    //rotateAndPaintImage(ctx, this.image, this.rotation * TO_RAD, this.posX, this.posY, this.posX + cardw * this.scaleX, this.posY + cardh * this.scaleY);
-  }
-  rotateAndPaintImage(){
     ctx.save();
     ctx.translate(this.posX, this.posY);
     ctx.rotate(this.rotation * TO_RAD);
@@ -68,7 +65,7 @@ function draw(){
 function reset(){
   if(players == 2){
     sprites[0] = new Card(cas, 0, 0, 0.2, 0.2, true);
-    //sprites[0].faceup = true;
+    sprites[0].faceup = true;
     sprites[1] = new Card(cac, 200, 0, 0.2, 0.2, false);
   }
   else if(players == 3){
