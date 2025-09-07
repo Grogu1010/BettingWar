@@ -63,6 +63,17 @@ var players = 2;
 var lastplayers;
 var game = "classic";
 
+// ace is 1, jack is 11, queen is 12, king is 13, joker is 14
+// 1 is clubs, 2 is diamonds, 3 is Hearts, 4 is spades
+var player1num = 1;
+var player1suit = 1;
+var player2num = 1;
+var player2suit = 1;
+var player3num = 1;
+var player3suit = 1;
+var player4num = 1;
+var player4suit = 1;
+
 var base = [];//always start rotation at 0
 base[0] = new Card(cas, 0, 0, 0, 0, 0, false, false);
 base[1] = new Card(cas, 0, 0, 0, 0, 0, false, false);
@@ -92,6 +103,8 @@ function reset(){
   players = document.getElementById('Players').value;
   lastplayers = players;
   if(players == 2){
+    player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
     base[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
     base[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
