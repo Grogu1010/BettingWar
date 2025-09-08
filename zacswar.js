@@ -118,9 +118,26 @@ function reset(){
     base[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
-    base[0] = new Card(c11, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    base[1] = new Card(c12, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
-    base[2] = new Card(c13, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+    player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    player2num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    layer3num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player3suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    layer3num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player3suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    player1num = 1;
+    player2num = 1;
+    player3num = 1;
+    player4num = 1;
+    var player1img = num2img(player1num, player1suit);
+    var player2img = num2img(player2num, player2suit);
+    var player3img = num2img(player3num, player3suit);
+    var player4img = num2img(player4num, player4suit);
+    
+    base[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    base[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    base[2] = new Card(player3img, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
   }
   else if(players == 4){
     base[0] = new Card(c11, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
