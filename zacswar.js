@@ -1,9 +1,9 @@
 // ace is 1, jack is 11, queen is 12, king is 13, joker is 14
 // 1 is clubs, 2 is diamonds, 3 is Hearts, 4 is spades
-const c11 = new Image(); cac.src = 'cards/ace_of_clubs.png';
-const c12 = new Image(); cad.src = 'cards/ace_of_diamonds.png';
-const c13 = new Image(); cah.src = 'cards/ace_of_hearts.png';
-const c14 = new Image(); cas.src = 'cards/ace_of_spades.png';
+const c11 = new Image(); c11.src = 'cards/ace_of_clubs.png';
+const c12 = new Image(); c12.src = 'cards/ace_of_diamonds.png';
+const c13 = new Image(); c13.src = 'cards/ace_of_hearts.png';
+const c14 = new Image(); c14.src = 'cards/ace_of_spades.png';
 const cfd = new Image(); cfd.src = 'back2.png'; // card face down
 
 class Card{
