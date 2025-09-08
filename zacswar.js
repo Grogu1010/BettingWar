@@ -77,10 +77,10 @@ var player4num = 1;
 var player4suit = 1;
 
 var base = [];//always start rotation at 0
-base[0] = new Card(cas, 0, 0, 0, 0, 0, false, false);
-base[1] = new Card(cas, 0, 0, 0, 0, 0, false, false);
-base[2] = new Card(cas, 0, 0, 0, 0, 0, false, false);
-base[3] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+base[0] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+base[1] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+base[2] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+base[3] = new Card(c11, 0, 0, 0, 0, 0, false, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -100,7 +100,7 @@ function draw(){
 }
 function reset(){
   for (let i = 0; i < base.length; i++) {
-    base[i] = new Card(cas, 0, 0, 0, 0, 0, false, false);
+    base[i] = new Card(c11, 0, 0, 0, 0, 0, false, false);
   }
   players = document.getElementById('Players').value;
   lastplayers = players;
@@ -117,15 +117,15 @@ function reset(){
     base[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
-    base[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    base[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
-    base[2] = new Card(cad, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+    base[0] = new Card(c11, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    base[1] = new Card(c12, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    base[2] = new Card(c13, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
   }
   else if(players == 4){
-    base[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    base[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
-    base[2] = new Card(cad, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
-    base[3] = new Card(cah, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
+    base[0] = new Card(c11, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    base[1] = new Card(c12, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    base[2] = new Card(c13, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+    base[3] = new Card(c14, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
   }
 }
 
