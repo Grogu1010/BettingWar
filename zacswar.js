@@ -47,8 +47,8 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const dpr = window.devicePixelRatio || 1;
-const currentCanvasWidth = 800;
-const currentCanvasHeight = 550;
+const baseCanvasWidth = 800;
+const baseCanvasHeight = 550;
 canvas.style.width = baseCanvasWidth + 'px';
 canvas.style.height = baseCanvasHeight + 'px';
 canvas.width = baseCanvasWidth * dpr;
