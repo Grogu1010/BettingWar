@@ -50,7 +50,7 @@ const dpr = window.devicePixelRatio || 1;
 const currentCanvasWidth = 800;
 const currentCanvasHeight = 550;
 canvas.style.width = baseCanvasWidth + 'px';
-canvas.style.height = basetCanvasHeight + 'px';
+canvas.style.height = baseCanvasHeight + 'px';
 canvas.width = baseCanvasWidth * dpr;
 canvas.height = baseCanvasHeight * dpr;
 ctx.scale(dpr, dpr);
