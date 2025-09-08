@@ -75,8 +75,13 @@ var player3num = 1;
 var player3suit = 1;
 var player4num = 1;
 var player4suit = 1;
+var base = []:
+base[0] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+base[1] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+base[2] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+base[3] = new Card(c11, 0, 0, 0, 0, 0, false, false);
 
-var current = [];//always start rotation at 0
+var current = [];//always start everthing at 0
 current[0] = new Card(c11, 0, 0, 0, 0, 0, false, false);
 current[1] = new Card(c11, 0, 0, 0, 0, 0, false, false);
 current[2] = new Card(c11, 0, 0, 0, 0, 0, false, false);
@@ -94,6 +99,11 @@ function draw(){
   for (let i = 0; i < current.length; i++) {
     if(current[i].visible){
       current[i].drawCard();
+    }
+  }
+  for (let i = 0; i < base.length; i++) {
+    if(base[i].visible){
+      base[i].drawCard();
     }
   }
   lastplayers = players;
@@ -116,6 +126,8 @@ function reset(){
 
     current[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
     current[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    base[0] = new Card(cfd, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    current[1] = new Card(cfd, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
     player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
@@ -124,8 +136,26 @@ function reset(){
     player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
     layer3num = Math.floor(Math.random() * 14) + 1; // 1 to 14
     player3suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    player1num = 1;
+    player2num = 1;
+    player3num = 1;
+    var player1img = num2img(player1num, player1suit);
+    var player2img = num2img(player2num, player2suit);
+    var player3img = num2img(player3num, player3suit);
+    
+    current[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    current[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    current[2] = new Card(player3img, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+  }
+  else if(players == 4){
+    player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    player2num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
     layer3num = Math.floor(Math.random() * 14) + 1; // 1 to 14
     player3suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    layer4num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player4suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
     player1num = 1;
     player2num = 1;
     player3num = 1;
@@ -134,16 +164,10 @@ function reset(){
     var player2img = num2img(player2num, player2suit);
     var player3img = num2img(player3num, player3suit);
     var player4img = num2img(player4num, player4suit);
-    
     current[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
     current[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
     current[2] = new Card(player3img, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
-  }
-  else if(players == 4){
-    current[0] = new Card(c11, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    current[1] = new Card(c12, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
-    current[2] = new Card(c13, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
-    current[3] = new Card(c14, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
+    current[3] = new Card(player4img, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
   }
 }
 
@@ -168,8 +192,8 @@ function flipAll(){
   for (let i = 0; i < current.length; i++) {
     current[i].flipCard();
   }
-  current[0].posY -= 50;
-  current[1].posY += 50;
+  current[0].posY += 50;
+  current[1].posY -= 50;
   current[2].poX += 50;
   current[3].posX -= 50;
 }
