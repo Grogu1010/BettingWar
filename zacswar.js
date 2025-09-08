@@ -111,8 +111,9 @@ function reset(){
     player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
     player1num = 1;
     player1num = 1;
-    var player1img = 'c${player1num}${player1suit}';
-    var player2img = 'c${player2num}${player2suit}';
+    var player1img;
+    var player2img;
+
     base[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
     base[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
@@ -126,6 +127,26 @@ function reset(){
     base[1] = new Card(c12, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
     base[2] = new Card(c13, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
     base[3] = new Card(c14, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
+  }
+}
+
+function num2img(num, suit){
+  if(num == 1){
+    if(suit == 1){
+      return c11;
+    }
+    else if(suit == 2){
+      return c12;
+    }
+    else if(suit == 3){
+      return c13;
+    }
+    else{
+      return c14;
+    }
+  }
+  else if(num == 2){
+    
   }
 }
 
