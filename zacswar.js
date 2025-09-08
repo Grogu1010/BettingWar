@@ -1,7 +1,9 @@
-const cac = new Image(); cac.src = 'cards/ace_of_clubs.png';
-const cad = new Image(); cad.src = 'cards/ace_of_diamonds.png';
-const cah = new Image(); cah.src = 'cards/ace_of_hearts.png';
-const cas = new Image(); cas.src = 'cards/ace_of_spades.png';
+// ace is 1, jack is 11, queen is 12, king is 13, joker is 14
+// 1 is clubs, 2 is diamonds, 3 is Hearts, 4 is spades
+const c11 = new Image(); cac.src = 'cards/ace_of_clubs.png';
+const c12 = new Image(); cad.src = 'cards/ace_of_diamonds.png';
+const c13 = new Image(); cah.src = 'cards/ace_of_hearts.png';
+const c14 = new Image(); cas.src = 'cards/ace_of_spades.png';
 const cfd = new Image(); cfd.src = 'back2.png'; // card face down
 
 class Card{
@@ -105,6 +107,9 @@ function reset(){
   if(players == 2){
     player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
     player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    player2num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    var player2img;
     base[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
     base[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
@@ -124,6 +129,11 @@ function reset(){
 function flipAll(){
   for (let i = 0; i < base.length; i++) {
     base[i].flipCard();
+  }
+}
+function num2img(num, suit){
+  if(num == ){
+    return cac;
   }
 }
 
