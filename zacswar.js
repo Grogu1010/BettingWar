@@ -41,16 +41,16 @@ class Card{
 
 // Byron Knoll: http://code.google.com/p/vector-playing-cards/
 // card pngs are 500 x 726
-// for (let i = 0; i < base.length; i++) {base[i].flipCard();}
+// for (let i = 0; i < current.length; i++) {current[i].flipCard();}
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 const dpr = window.devicePixelRatio || 1;
-const baseCanvasWidth = 800;
-const baseCanvasHeight = 550;
+const currentCanvasWidth = 800;
+const currentCanvasHeight = 550;
 canvas.style.width = baseCanvasWidth + 'px';
-canvas.style.height = baseCanvasHeight + 'px';
+canvas.style.height = basetCanvasHeight + 'px';
 canvas.width = baseCanvasWidth * dpr;
 canvas.height = baseCanvasHeight * dpr;
 ctx.scale(dpr, dpr);
@@ -76,11 +76,11 @@ var player3suit = 1;
 var player4num = 1;
 var player4suit = 1;
 
-var base = [];//always start rotation at 0
-base[0] = new Card(c11, 0, 0, 0, 0, 0, false, false);
-base[1] = new Card(c11, 0, 0, 0, 0, 0, false, false);
-base[2] = new Card(c11, 0, 0, 0, 0, 0, false, false);
-base[3] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+var current = [];//always start rotation at 0
+current[0] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+current[1] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+current[2] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+current[3] = new Card(c11, 0, 0, 0, 0, 0, false, false);
 
 function draw(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -91,16 +91,16 @@ function draw(){
     reset();
   }
   
-  for (let i = 0; i < base.length; i++) {
-    if(base[i].visible){
-      base[i].drawCard();
+  for (let i = 0; i < current.length; i++) {
+    if(current[i].visible){
+      current[i].drawCard();
     }
   }
   lastplayers = players;
 }
 function reset(){
-  for (let i = 0; i < base.length; i++) {
-    base[i] = new Card(c11, 0, 0, 0, 0, 0, false, false);
+  for (let i = 0; i < current.length; i++) {
+    current[i] = new Card(c11, 0, 0, 0, 0, 0, false, false);
   }
   players = document.getElementById('Players').value;
   lastplayers = players;
@@ -114,8 +114,8 @@ function reset(){
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
 
-    base[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    base[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    current[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    current[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
     player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
@@ -135,15 +135,15 @@ function reset(){
     var player3img = num2img(player3num, player3suit);
     var player4img = num2img(player4num, player4suit);
     
-    base[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    base[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
-    base[2] = new Card(player3img, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+    current[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    current[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    current[2] = new Card(player3img, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
   }
   else if(players == 4){
-    base[0] = new Card(c11, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    base[1] = new Card(c12, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
-    base[2] = new Card(c13, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
-    base[3] = new Card(c14, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
+    current[0] = new Card(c11, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    current[1] = new Card(c12, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    current[2] = new Card(c13, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+    current[3] = new Card(c14, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
   }
 }
 
@@ -168,9 +168,13 @@ function num2img(num, suit){
 }
 
 function flipAll(){
-  for (let i = 0; i < base.length; i++) {
-    base[i].flipCard();
+  for (let i = 0; i < current.length; i++) {
+    current[i].flipCard();
   }
+  current[0].posY -= 50;
+  current[1].posY += 50;
+  current[2].poX += 50;
+  current[3].posX -= 50;
 }
 
 loopid = setInterval(draw, loopspeed);
