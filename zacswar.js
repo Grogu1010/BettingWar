@@ -162,9 +162,6 @@ function num2img(num, suit){
       return c14;
     }
   }
-  else if(num == 2){
-    
-  }
 }
 
 function flipAll(){
