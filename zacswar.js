@@ -111,8 +111,8 @@ function reset(){
     player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
     player1num = 1;
     player1num = 1;
-    var player1img;
-    var player2img;
+    var player1img = num2img(player1num, player1suit);
+    var player2img = num2img(player2num, player2suit);
 
     base[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
     base[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
