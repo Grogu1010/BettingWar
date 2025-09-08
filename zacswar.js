@@ -110,7 +110,7 @@ function reset(){
     player2num = Math.floor(Math.random() * 14) + 1; // 1 to 14
     player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
     player1num = 1;
-    player1num = 1;
+    player2num = 1;
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
 
