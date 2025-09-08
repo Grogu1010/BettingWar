@@ -146,6 +146,9 @@ function reset(){
     current[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
     current[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
     current[2] = new Card(player3img, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+    base[0] = new Card(cfd, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    base[1] = new Card(cfd, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    base[2] = new Card(cfd, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
   }
   else if(players == 4){
     player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
@@ -168,6 +171,10 @@ function reset(){
     current[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
     current[2] = new Card(player3img, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
     current[3] = new Card(player4img, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
+    base[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    base[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    base[2] = new Card(player3img, canvas.width * 0.25, canvas.height / 2, 0.15, 0.15, 90, false, true);
+    base[3] = new Card(player4img, canvas.width * 0.75, canvas.height / 2, 0.15, 0.15, 270, false, true);
   }
 }
 
