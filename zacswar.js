@@ -109,9 +109,12 @@ function reset(){
     player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
     player2num = Math.floor(Math.random() * 14) + 1; // 1 to 14
     player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    var player2img;
-    base[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    base[1] = new Card(cac, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    player1num = 1;
+    player1num = 1;
+    var player1img = 'c${player1num}${player1suit}';
+    var player2img = 'c${player2num}${player2suit}';
+    base[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
+    base[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
     base[0] = new Card(cas, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
@@ -129,11 +132,6 @@ function reset(){
 function flipAll(){
   for (let i = 0; i < base.length; i++) {
     base[i].flipCard();
-  }
-}
-function num2img(num, suit){
-  if(num == ){
-    return cac;
   }
 }
 
