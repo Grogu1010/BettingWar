@@ -202,10 +202,10 @@ function flipAll(){
   for (let i = 0; i < current.length; i++) {
     current[i].flipCard();
   }
-  current[0].posY += cardh * current[0].scaleY * 1.5;
-  current[1].posY -= cardh * current[0].scaleY * 1.5;
-  current[2].poX += cardw * current[0].scaleX * 1.5;
-  current[3].posX -= cardw * current[0].scaleX * 1.5;
+  current[0].posY += cardh * current[0].scaleY * 1.25;
+  current[1].posY -= cardh * current[0].scaleY * 1.25;
+  current[2].posX += cardw * current[0].scaleX * 2;
+  current[3].posX -= cardw * current[0].scaleX * 2;
 }
 
 loopid = setInterval(draw, loopspeed);
