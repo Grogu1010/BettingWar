@@ -112,6 +112,9 @@ function reset(){
   for (let i = 0; i < current.length; i++) {
     current[i] = new Card(c11, 0, 0, 0, 0, 0, false, false);
   }
+  for (let i = 0; i < base.length; i++) {
+    base[i] = new Card(cfd, 0, 0, 0, 0, 0, false, false);
+  }
   players = document.getElementById('Players').value;
   lastplayers = players;
   if(players == 2){
@@ -127,7 +130,7 @@ function reset(){
     current[0] = new Card(player1img, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
     current[1] = new Card(player2img, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
     base[0] = new Card(cfd, canvas.width / 2, canvas.height * 0.1, 0.15, 0.15, 180, false, true);
-    current[1] = new Card(cfd, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
+    base[1] = new Card(cfd, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
     player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
