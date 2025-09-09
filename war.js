@@ -4,7 +4,7 @@ const c11 = new Image(); c11.src = 'cards/ace_of_clubs.png';
 const c12 = new Image(); c12.src = 'cards/ace_of_diamonds.png';
 const c13 = new Image(); c13.src = 'cards/ace_of_hearts.png';
 const c14 = new Image(); c14.src = 'cards/ace_of_spades.png';
-const cfd = new Image(); cfd.src = 'back2.png'; // card face down
+const cfd = new Image(); cfd.src = 'back.png'; // card face down
 
 class Card{
   constructor(image, posX, posY, scaleX, scaleY, rotation, faceup, visible){
