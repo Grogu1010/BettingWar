@@ -207,7 +207,21 @@ function flipAll(){
   current[1].posY -= cardh * current[0].scaleY * 1.25;
   current[2].posX += cardw * current[0].scaleX * 2;
   current[3].posX -= cardw * current[0].scaleX * 2;
-  if((player1num * 10 + player1suit > player2num * 10 + player2suit) && (player1num * 10 + player1suit > player3num * 10 + player3suit)){}
+  if((player1num > player2num && player1suit > player2suit) && (player1num > player3num && player1suit > player3suit) && (player1num > player4num && player1suit > player4suit)){
+    winner = 1;
+  }
+  else if((player2num > player2num && player1suit > player2suit) && (player1num > player3num && player1suit > player3suit) && (player1num > player4num && player1suit > player4suit)){
+    winner = 2;
+  }
+  else if((player3num > player2num && player1suit > player2suit) && (player1num > player3num && player1suit > player3suit) && (player1num > player4num && player1suit > player4suit)){
+    winner = 3;
+  }
+  else if((player4num > player1num && player4suit > player1suit) && (player4num > player2num && player4suit > player2suit) && (player4num > player3num && player4suit > player3suit)){
+    winner = 4;
+  }
+  else{
+    winner = 5;
+  }
 }
 
 loopid = setInterval(draw, loopspeed);
