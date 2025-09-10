@@ -64,6 +64,7 @@ const bgcolor = 'green';
 var players = 2;
 var lastplayers;
 var game = "classic";
+var winner = 1;
 
 // ace is 1, jack is 11, queen is 12, king is 13, joker is 14
 // 1 is clubs, 2 is diamonds, 3 is Hearts, 4 is spades
@@ -206,6 +207,7 @@ function flipAll(){
   current[1].posY -= cardh * current[0].scaleY * 1.25;
   current[2].posX += cardw * current[0].scaleX * 2;
   current[3].posX -= cardw * current[0].scaleX * 2;
+  if((player1num * 10 + player1suit > player2num * 10 + player2suit) && (player1num * 10 + player1suit > player3num * 10 + player3suit)){}
 }
 
 loopid = setInterval(draw, loopspeed);
