@@ -64,6 +64,14 @@ const bgcolor = 'green';
 var players = 2;
 var lastplayers;
 var game = "classic";
+var p1winnum;
+var p2winnum;
+var p3winnum;
+var p4winnum;
+var p1winsuit;
+var p2winsuit;
+var p3winsuit;
+var p4winsuit;
 var winner = 1;
 
 // ace is 1, jack is 11, queen is 12, king is 13, joker is 14
@@ -200,6 +208,10 @@ function num2img(num, suit){
 }
 
 function flipAll(){
+  p1winsuit = false;
+  p2winsuit = false;
+  p3winsuit = false;
+  p4winsuit = false;
   for (let i = 0; i < current.length; i++) {
     current[i].flipCard();
   }
@@ -207,20 +219,29 @@ function flipAll(){
   current[1].posY -= cardh * current[0].scaleY * 1.25;
   current[2].posX += cardw * current[0].scaleX * 2;
   current[3].posX -= cardw * current[0].scaleX * 2;
-  if((player1num > player2num && player1suit > player2suit) && (player1num > player3num && player1suit > player3suit) && (player1num > player4num && player1suit > player4suit)){
-    winner = 1;
+  if(player1suit > player2suit && player1suit > player3suit && player1suit > player4suit){
+    p1winnum = true;
   }
-  else if((player2num > player1num && player2suit > player1suit) && (player2num > player3num && player2suit > player3suit) && (player2num > player4num && player2suit > player4suit)){
-    winner = 2;
+  if(player2suit > player1suit && player2suit > player3suit && player2suit > player4suit)){
+    p2winsuit = true;
   }
-  else if((player3num > player1num && player3suit > player1suit) && (player3num > player2num && player3suit > player2suit) && (player3num > player4num && player3suit > player4suit)){
-    winner = 3;
+  if(player3suit > player1suit && player3suit > player2suit && player3suit > player4suit)){
+    p3winsuit = true;
   }
-  else if((player4num > player1num && player4suit > player1suit) && (player4num > player2num && player4suit > player2suit) && (player4num > player3num && player4suit > player3suit)){
-    winner = 4;
+  if(player4suit > player1suit && (player4num > player2num && player4suit > player2suit) && (player4num > player3num && player4suit > player3suit)){
+    p4winsuit = true;
   }
-  else{
-    winner = 5;
+  if(player1num > player2num && player1num > player3num && player1num > player4num){
+    p1winnum = true;
+  }
+  if(player1num > player2num && player1num > player3num && player1num > player4num){
+    p1winnum = true;
+  }
+  if(player1num > player2num && player1num > player3num && player1num > player4num){
+    p1winnum = true;
+  }
+  if(player1num > player2num && player1num > player3num && player1num > player4num){
+    p1winnum = true;
   }
   document.getElementById('winner').value = winner;
 }
