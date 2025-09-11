@@ -210,10 +210,10 @@ function flipAll(){
   if((player1num > player2num && player1suit > player2suit) && (player1num > player3num && player1suit > player3suit) && (player1num > player4num && player1suit > player4suit)){
     winner = 1;
   }
-  else if((player2num > player2num && player1suit > player2suit) && (player1num > player3num && player1suit > player3suit) && (player1num > player4num && player1suit > player4suit)){
+  else if((player2num > player1num && player2suit > player1suit) && (player2num > player3num && player2suit > player3suit) && (player2num > player4num && player2suit > player4suit)){
     winner = 2;
   }
-  else if((player3num > player2num && player1suit > player2suit) && (player1num > player3num && player1suit > player3suit) && (player1num > player4num && player1suit > player4suit)){
+  else if((player3num > player1num && player3suit > player1suit) && (player3num > player2num && player3suit > player2suit) && (player3num > player4num && player3suit > player4suit)){
     winner = 3;
   }
   else if((player4num > player1num && player4suit > player1suit) && (player4num > player2num && player4suit > player2suit) && (player4num > player3num && player4suit > player3suit)){
@@ -222,6 +222,9 @@ function flipAll(){
   else{
     winner = 5;
   }
+}
+function unflipAll(){
+  
 }
 
 loopid = setInterval(draw, loopspeed);
