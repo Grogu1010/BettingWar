@@ -222,6 +222,7 @@ function flipAll(){
   else{
     winner = 5;
   }
+  document.getElementById('Players').value = winner;
 }
 function unflipAll(){
   
