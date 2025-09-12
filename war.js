@@ -4,9 +4,9 @@ const c11 = new Image(); c11.src = 'cards/ace_of_clubs.png';
 const c12 = new Image(); c12.src = 'cards/ace_of_diamonds.png';
 const c13 = new Image(); c13.src = 'cards/ace_of_hearts.png';
 const c14 = new Image(); c14.src = 'cards/ace_of_spades.png';
-const c21 = new Image(); c21.src = 'cards/2_of_spades.png';
-const c22 = new Image(); c22.src = 'cards/2_of_spades.png';
-const c23 = new Image(); c23.src = 'cards/2_of_spades.png';
+const c21 = new Image(); c21.src = 'cards/2_of_clubs.png';
+const c22 = new Image(); c22.src = 'cards/2_of_diamonds.png';
+const c23 = new Image(); c23.src = 'cards/2_of_hearts.png';
 const c24 = new Image(); c24.src = 'cards/2_of_spades.png';
 const cfd = new Image(); cfd.src = 'back.png'; // card face down
 
