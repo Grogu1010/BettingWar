@@ -203,8 +203,7 @@ function num2img(num, suit){
     else{
       return c14;
     }
-  }
-  else if(num == 2){
+  }else if(num == 2){
     if(suit == 1){
       return c21;
     }
@@ -216,6 +215,19 @@ function num2img(num, suit){
     }
     else{
       return c24;
+    }
+  }else if(num == 3){
+    if(suit == 1){
+      return c31;
+    }
+    else if(suit == 2){
+      return c32;
+    }
+    else if(suit == 3){
+      return c33;
+    }
+    else{
+      return c34;
     }
   }
 }
