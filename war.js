@@ -1,4 +1,4 @@
-// ace is 1, jack is 11, queen is 12, king is 13, joker is 15
+// ace is 14, jack is 11, queen is 12, king is 13, joker is 15
 // 1 is clubs, 2 is diamonds, 3 is Hearts, 4 is spades
 const c11 = new Image(); c11.src = 'cards/ace_of_clubs.png';
 const c12 = new Image(); c12.src = 'cards/ace_of_diamonds.png';
@@ -192,7 +192,7 @@ function reset(){
 }
 
 function num2img(num, suit){
-  if(num == 1){
+  if(num == 14){
     if(suit == 1){
       return c11;
     }
