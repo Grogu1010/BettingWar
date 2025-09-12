@@ -8,6 +8,10 @@ const c21 = new Image(); c21.src = 'cards/2_of_clubs.png';
 const c22 = new Image(); c22.src = 'cards/2_of_diamonds.png';
 const c23 = new Image(); c23.src = 'cards/2_of_hearts.png';
 const c24 = new Image(); c24.src = 'cards/2_of_spades.png';
+const c31 = new Image(); c31.src = 'cards/3_of_clubs.png';
+const c32 = new Image(); c32.src = 'cards/3_of_diamonds.png';
+const c33 = new Image(); c33.src = 'cards/3_of_hearts.png';
+const c34 = new Image(); c34.src = 'cards/3_of_spades.png';
 const cfd = new Image(); cfd.src = 'back.png'; // card face down
 
 class Card{
@@ -131,12 +135,10 @@ function reset(){
   players = document.getElementById('Players').value;
   lastplayers = players;
   if(players == 2){
-    player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player1num = Math.floor(Math.random() * 3) + 1; // 1 to 14
     player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    player2num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player2num = Math.floor(Math.random() * 3) + 1; // 1 to 14
     player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    player1num = 1;
-    player2num = 1;
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
 
@@ -146,15 +148,12 @@ function reset(){
     base[1] = new Card(cfd, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
-    player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player1num = Math.floor(Math.random() * 3) + 1; // 1 to 14
     player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    player2num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player2num = Math.floor(Math.random() * 3) + 1; // 1 to 14
     player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    layer3num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    layer3num = Math.floor(Math.random() * 3) + 1; // 1 to 14
     player3suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    player1num = 1;
-    player2num = 1;
-    player3num = 1;
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
     var player3img = num2img(player3num, player3suit);
@@ -167,13 +166,13 @@ function reset(){
     base[2] = new Card(cfd, canvas.width * 0.2, canvas.height / 2, 0.15, 0.15, 90, false, true);
   }
   else if(players == 4){
-    player1num = Math.floor(Math.random() * 2) + 1; // 1 to 14
+    player1num = Math.floor(Math.random() * 3) + 1; // 1 to 14
     player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    player2num = Math.floor(Math.random() * 2) + 1; // 1 to 14
+    player2num = Math.floor(Math.random() * 3) + 1; // 1 to 14
     player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    layer3num = Math.floor(Math.random() * 2) + 1; // 1 to 14
+    layer3num = Math.floor(Math.random() * 3) + 1; // 1 to 14
     player3suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    layer4num = Math.floor(Math.random() * 2) + 1; // 1 to 14
+    layer4num = Math.floor(Math.random() * 3) + 1; // 1 to 14
     player4suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
