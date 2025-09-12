@@ -220,33 +220,30 @@ function flipAll(){
   current[2].posX += cardw * current[0].scaleX * 2;
   current[3].posX -= cardw * current[0].scaleX * 2;
   if(player1suit > player2suit && player1suit > player3suit && player1suit > player4suit){
-    p1winnum = true;
+    p1winsuit = true;
   }
-  if(player2suit > player1suit && player2suit > player3suit && player2suit > player4suit)){
+  if(player2suit > player1suit && player2suit > player3suit && player2suit > player4suit){
     p2winsuit = true;
   }
-  if(player3suit > player1suit && player3suit > player2suit && player3suit > player4suit)){
+  if(player3suit > player1suit && player3suit > player2suit && player3suit > player4suit){
     p3winsuit = true;
   }
-  if(player4suit > player1suit && (player4num > player2num && player4suit > player2suit) && (player4num > player3num && player4suit > player3suit)){
+  if(player4suit > player1suit && player4suit > player2suit && player4suit > player3suit){
     p4winsuit = true;
   }
   if(player1num > player2num && player1num > player3num && player1num > player4num){
     p1winnum = true;
   }
-  if(player1num > player2num && player1num > player3num && player1num > player4num){
-    p1winnum = true;
+  if(player2num > player1num && player2num > player3num && player2num > player4num){
+    p2winnum = true;
   }
-  if(player1num > player2num && player1num > player3num && player1num > player4num){
-    p1winnum = true;
+  if(player3num > player1num && player3num > player2num && player3num > player4num){
+    p3winnum = true;
   }
-  if(player1num > player2num && player1num > player3num && player1num > player4num){
-    p1winnum = true;
+  if(player4num > player1num && player4num > player2num && player4num > player3num){
+    p4winnum = true;
   }
   document.getElementById('winner').value = winner;
-}
-function unflipAll(){
-  
 }
 
 loopid = setInterval(draw, loopspeed);
