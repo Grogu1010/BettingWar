@@ -241,6 +241,7 @@ function num2img(num, suit){
 }
 
 function flipAll(){
+  winner = 0;
   p1winsuit = false;
   p2winsuit = false;
   p3winsuit = false;
