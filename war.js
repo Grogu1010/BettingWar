@@ -1,4 +1,4 @@
-// ace is 1, jack is 11, queen is 12, king is 13, joker is 14
+// ace is 1, jack is 11, queen is 12, king is 13, joker is 15
 // 1 is clubs, 2 is diamonds, 3 is Hearts, 4 is spades
 const c11 = new Image(); c11.src = 'cards/ace_of_clubs.png';
 const c12 = new Image(); c12.src = 'cards/ace_of_diamonds.png';
@@ -82,7 +82,7 @@ var p3winsuit;
 var p4winsuit;
 var winner = 1;
 
-// ace is 1, jack is 11, queen is 12, king is 13, joker is 14
+// ace is 1, jack is 11, queen is 12, king is 13, joker is 15
 // 1 is clubs, 2 is diamonds, 3 is Hearts, 4 is spades
 var player1num = 1;
 var player1suit = 1;
@@ -135,10 +135,10 @@ function reset(){
   players = document.getElementById('Players').value;
   lastplayers = players;
   if(players == 2){
-    player1num = Math.floor(Math.random() * 3) + 1; // 1 to 14
-    player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    player2num = Math.floor(Math.random() * 3) + 1; // 1 to 14
-    player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    player1num = Math.floor(Math.random() * 3) + 2; // 2 to 14
+    player1suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    player2num = Math.floor(Math.random() * 3) + 2; // 2 to 14
+    player2suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
 
@@ -148,12 +148,14 @@ function reset(){
     base[1] = new Card(cfd, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
-    player1num = Math.floor(Math.random() * 3) + 1; // 1 to 14
-    player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    player2num = Math.floor(Math.random() * 3) + 1; // 1 to 14
-    player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    layer3num = Math.floor(Math.random() * 3) + 1; // 1 to 14
-    player3suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    player1num = Math.floor(Math.random() * 3) + 2; // 2 to 14
+    player1suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    player2num = Math.floor(Math.random() * 3) + 2; // 2 to 14
+    player2suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    player3num = Math.floor(Math.random() * 3) + 2; // 2 to 14
+    player3suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    if(player1num == 1){player1num = 14;};
+    if(player1num == 1){player1num = 14;};
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
     var player3img = num2img(player3num, player3suit);
@@ -166,14 +168,14 @@ function reset(){
     base[2] = new Card(cfd, canvas.width * 0.2, canvas.height / 2, 0.15, 0.15, 90, false, true);
   }
   else if(players == 4){
-    player1num = Math.floor(Math.random() * 3) + 1; // 1 to 14
-    player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    player2num = Math.floor(Math.random() * 3) + 1; // 1 to 14
-    player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    layer3num = Math.floor(Math.random() * 3) + 1; // 1 to 14
-    player3suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    layer4num = Math.floor(Math.random() * 3) + 1; // 1 to 14
-    player4suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
+    player1num = Math.floor(Math.random() * 3) + 2; // 2 to 14
+    player1suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    player2num = Math.floor(Math.random() * 3) + 2; // 2 to 14
+    player2suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    player3num = Math.floor(Math.random() * 3) + 2; // 2 to 14
+    player3suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    player4num = Math.floor(Math.random() * 3) + 2; // 2 to 14
+    player4suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
     var player3img = num2img(player3num, player3suit);
@@ -269,13 +271,22 @@ function flipAll(){
   if(player4num > player1num && player4num > player2num && player4num > player3num){
     p4winnum = true;
   }
-  if(p1winsuit && !p2winsuit && !p3winsuit && !p4winsuit){
+  /*if(p1winsuit && !p2winsuit && !p3winsuit && !p4winsuit){
     winner = 1;
   }else if(!p1winsuit && p2winsuit && !p3winsuit && !p4winsuit){
     winner = 2;
   }else if(!p1winsuit && !p2winsuit && p3winsuit && !p4winsuit){
     winner = 3;
   }else if(!p1winsuit && !p2winsuit && !p3winsuit && p4winsuit){
+    winner = 4;
+  }*/
+  if(p1winnum && !p2winnum && !p3winnum && !p4winnum){
+    winner = 1;
+  }else if(!p1winnum && p2winnum && !p3winnum && !p4winnum){
+    winner = 2;
+  }else if(!p1winnum && !p2winnum && p3winnum && !p4winnum){
+    winner = 3;
+  }else if(!p1winnum && !p2winnum && !p3winnum && p4winnum){
     winner = 4;
   }
   document.getElementById('winner').value = winner;
