@@ -4,6 +4,10 @@ const c11 = new Image(); c11.src = 'cards/ace_of_clubs.png';
 const c12 = new Image(); c12.src = 'cards/ace_of_diamonds.png';
 const c13 = new Image(); c13.src = 'cards/ace_of_hearts.png';
 const c14 = new Image(); c14.src = 'cards/ace_of_spades.png';
+const c21 = new Image(); c21.src = 'cards/2_of_spades.png';
+const c22 = new Image(); c22.src = 'cards/2_of_spades.png';
+const c23 = new Image(); c23.src = 'cards/2_of_spades.png';
+const c24 = new Image(); c24.src = 'cards/2_of_spades.png';
 const cfd = new Image(); cfd.src = 'back.png'; // card face down
 
 class Card{
@@ -163,18 +167,14 @@ function reset(){
     base[2] = new Card(cfd, canvas.width * 0.2, canvas.height / 2, 0.15, 0.15, 90, false, true);
   }
   else if(players == 4){
-    player1num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player1num = Math.floor(Math.random() * 2) + 1; // 1 to 14
     player1suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    player2num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    player2num = Math.floor(Math.random() * 2) + 1; // 1 to 14
     player2suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    layer3num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    layer3num = Math.floor(Math.random() * 2) + 1; // 1 to 14
     player3suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    layer4num = Math.floor(Math.random() * 14) + 1; // 1 to 14
+    layer4num = Math.floor(Math.random() * 2) + 1; // 1 to 14
     player4suit = Math.floor(Math.random() * 4) + 1; // 1 to 4
-    player1num = 1;
-    player2num = 1;
-    player3num = 1;
-    player4num = 1;
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
     var player3img = num2img(player3num, player3suit);
@@ -203,6 +203,20 @@ function num2img(num, suit){
     }
     else{
       return c14;
+    }
+  }
+  else if(num == 2){
+    if(suit == 1){
+      return c21;
+    }
+    else if(suit == 2){
+      return c22;
+    }
+    else if(suit == 3){
+      return c23;
+    }
+    else{
+      return c24;
     }
   }
 }
