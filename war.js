@@ -139,6 +139,10 @@ function reset(){
     player1suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
     player2num = Math.floor(Math.random() * 2) + 2; // 2 to 14
     player2suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    player3num = 0;
+    player3suit = 0;
+    player4num = 0;
+    player4suit = 0;
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
 
@@ -154,6 +158,8 @@ function reset(){
     player2suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
     player3num = Math.floor(Math.random() * 2) + 2; // 2 to 14
     player3suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    player4num = 0;
+    player4suit = 0;
     if(player1num == 1){player1num = 14;};
     if(player1num == 1){player1num = 14;};
     var player1img = num2img(player1num, player1suit);
