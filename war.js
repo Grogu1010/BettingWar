@@ -219,6 +219,7 @@ function flipAll(){
   current[1].posY -= cardh * current[0].scaleY * 1.25;
   current[2].posX += cardw * current[0].scaleX * 2;
   current[3].posX -= cardw * current[0].scaleX * 2;
+  winner = 0;
   if(player1suit > player2suit && player1suit > player3suit && player1suit > player4suit){
     p1winsuit = true;
   }
@@ -242,6 +243,15 @@ function flipAll(){
   }
   if(player4num > player1num && player4num > player2num && player4num > player3num){
     p4winnum = true;
+  }
+  if(p1winsuit && !p2winsuit && !p3winsuit && !p4winsuit){
+    winner = 1;
+  }else if(!p1winsuit && p2winsuit && !p3winsuit && !p4winsuit){
+    winner = 2;
+  }else if(!p1winsuit && !p2winsuit && p3winsuit && !p4winsuit){
+    winner = 3;
+  }else if(!p1winsuit && !p2winsuit && !p3winsuit && p4winsuit){
+    winner = 4;
   }
   document.getElementById('winner').value = winner;
 }
