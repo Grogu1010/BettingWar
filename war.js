@@ -56,10 +56,15 @@ const c112 = new Image(); c112.src = 'cards/jack_of_diamonds.png';
 const c113 = new Image(); c113.src = 'cards/jack_of_hearts.png';
 const c114 = new Image(); c114.src = 'cards/jack_of_spades.png';
 //12, queen
-const c111 = new Image(); c111.src = 'cards/queen_of_clubs.png';
-const c112 = new Image(); c112.src = 'cards/queen_of_diamonds.png';
-const c113 = new Image(); c113.src = 'cards/queen_of_hearts.png';
-const c114 = new Image(); c114.src = 'cards/queen_of_spades.png';
+const c121 = new Image(); c121.src = 'cards/queen_of_clubs.png';
+const c122 = new Image(); c122.src = 'cards/queen_of_diamonds.png';
+const c123 = new Image(); c123.src = 'cards/queen_of_hearts.png';
+const c124 = new Image(); c124.src = 'cards/queen_of_spades.png';
+//13, king
+const c131 = new Image(); c131.src = 'cards/king_of_clubs.png';
+const c132 = new Image(); c132.src = 'cards/king_of_diamonds.png';
+const c133 = new Image(); c133.src = 'cards/king_of_hearts.png';
+const c134 = new Image(); c134.src = 'cards/king_of_spades.png';
 //other
 const cfd = new Image(); cfd.src = 'back.png'; // card face down
 
