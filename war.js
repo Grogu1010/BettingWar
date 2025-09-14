@@ -1,17 +1,66 @@
 // ace is 14, jack is 11, queen is 12, king is 13, joker is 15
 // 1 is clubs, 2 is diamonds, 3 is Hearts, 4 is spades
+//1, ace
 const c11 = new Image(); c11.src = 'cards/ace_of_clubs.png';
 const c12 = new Image(); c12.src = 'cards/ace_of_diamonds.png';
 const c13 = new Image(); c13.src = 'cards/ace_of_hearts.png';
 const c14 = new Image(); c14.src = 'cards/ace_of_spades.png';
+//2
 const c21 = new Image(); c21.src = 'cards/2_of_clubs.png';
 const c22 = new Image(); c22.src = 'cards/2_of_diamonds.png';
 const c23 = new Image(); c23.src = 'cards/2_of_hearts.png';
 const c24 = new Image(); c24.src = 'cards/2_of_spades.png';
+//3
 const c31 = new Image(); c31.src = 'cards/3_of_clubs.png';
 const c32 = new Image(); c32.src = 'cards/3_of_diamonds.png';
 const c33 = new Image(); c33.src = 'cards/3_of_hearts.png';
 const c34 = new Image(); c34.src = 'cards/3_of_spades.png';
+//4
+const c41 = new Image(); c41.src = 'cards/4_of_clubs.png';
+const c42 = new Image(); c42.src = 'cards/4_of_diamonds.png';
+const c43 = new Image(); c43.src = 'cards/4_of_hearts.png';
+const c44 = new Image(); c44.src = 'cards/4_of_spades.png';
+//5
+const c51 = new Image(); c51.src = 'cards/5_of_clubs.png';
+const c52 = new Image(); c52.src = 'cards/5_of_diamonds.png';
+const c53 = new Image(); c53.src = 'cards/5_of_hearts.png';
+const c54 = new Image(); c54.src = 'cards/5_of_spades.png';
+//6
+const c61 = new Image(); c61.src = 'cards/6_of_clubs.png';
+const c62 = new Image(); c62.src = 'cards/6_of_diamonds.png';
+const c63 = new Image(); c63.src = 'cards/6_of_hearts.png';
+const c64 = new Image(); c64.src = 'cards/6_of_spades.png';
+//7
+const c71 = new Image(); c71.src = 'cards/7_of_clubs.png';
+const c72 = new Image(); c72.src = 'cards/7_of_diamonds.png';
+const c73 = new Image(); c73.src = 'cards/7_of_hearts.png';
+const c74 = new Image(); c74.src = 'cards/7_of_spades.png';
+//8
+const c81 = new Image(); c81.src = 'cards/8_of_clubs.png';
+const c82 = new Image(); c82.src = 'cards/8_of_diamonds.png';
+const c83 = new Image(); c83.src = 'cards/8_of_hearts.png';
+const c84 = new Image(); c84.src = 'cards/8_of_spades.png';
+//9
+const c91 = new Image(); c91.src = 'cards/9_of_clubs.png';
+const c92 = new Image(); c92.src = 'cards/9_of_diamonds.png';
+const c93 = new Image(); c93.src = 'cards/9_of_hearts.png';
+const c94 = new Image(); c94.src = 'cards/9_of_spades.png';
+//10
+const c101 = new Image(); c101.src = 'cards/10_of_clubs.png';
+const c102 = new Image(); c102.src = 'cards/10_of_diamonds.png';
+const c103 = new Image(); c103.src = 'cards/10_of_hearts.png';
+const c104 = new Image(); c104.src = 'cards/10_of_spades.png';
+//11, jack
+const c111 = new Image(); c111.src = 'cards/jack_of_clubs.png';
+const c112 = new Image(); c112.src = 'cards/jack_of_diamonds.png';
+const c113 = new Image(); c113.src = 'cards/jack_of_hearts.png';
+const c114 = new Image(); c114.src = 'cards/jack_of_spades.png';
+//12, queen
+const c111 = new Image(); c111.src = 'cards/queen_of_clubs.png';
+const c112 = new Image(); c112.src = 'cards/queen_of_diamonds.png';
+const c113 = new Image(); c113.src = 'cards/queen_of_hearts.png';
+const c114 = new Image(); c114.src = 'cards/queen_of_spades.png';
+//other
 const cfd = new Image(); cfd.src = 'back.png'; // card face down
 
 class Card{
