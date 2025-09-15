@@ -189,9 +189,9 @@ function reset(){
   players = document.getElementById('Players').value;
   lastplayers = players;
   if(players == 2){
-    player1num = Math.floor(Math.random() * 2) + 2; // 2 to 14
+    player1num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player1suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
-    player2num = Math.floor(Math.random() * 2) + 2; // 2 to 14
+    player2num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player2suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
     player3num = 0;
     player3suit = 0;
@@ -268,28 +268,132 @@ function num2img(num, suit){
   }else if(num == 2){
     if(suit == 1){
       return c21;
-    }
-    else if(suit == 2){
+    }else if(suit == 2){
       return c22;
-    }
-    else if(suit == 3){
+    }else if(suit == 3){
       return c23;
-    }
-    else{
+    }else{
       return c24;
     }
   }else if(num == 3){
     if(suit == 1){
       return c31;
-    }
-    else if(suit == 2){
+    }else if(suit == 2){
       return c32;
-    }
-    else if(suit == 3){
+    }else if(suit == 3){
       return c33;
-    }
-    else{
+    }else{
       return c34;
+    }
+  }else if(num == 4){
+    if(suit == 1){
+      return c41;
+    }else if(suit == 2){
+      return c42;
+    }else if(suit == 3){
+      return c43;
+    }else{
+      return c44;
+    }
+  }else if(num == 5){
+    if(suit == 1){
+      return c51;
+    }else if(suit == 2){
+      return c52;
+    }else if(suit == 3){
+      return c53;
+    }else{
+      return c54;
+    }
+  }else if(num == 6){
+    if(suit == 1){
+      return c61;
+    }else if(suit == 2){
+      return c62;
+    }else if(suit == 3){
+      return c63;
+    }else{
+      return c64;
+    }
+  }else if(num == 7){
+    if(suit == 1){
+      return c71;
+    }else if(suit == 2){
+      return c72;
+    }else if(suit == 3){
+      return c73;
+    }else{
+      return c74;
+    }
+  }else if(num == 8){
+    if(suit == 1){
+      return c81;
+    }else if(suit == 2){
+      return c82;
+    }else if(suit == 3){
+      return c83;
+    }else{
+      return c84;
+    }
+  }else if(num == 9){
+    if(suit == 1){
+      return c91;
+    }else if(suit == 2){
+      return c92;
+    }else if(suit == 3){
+      return c93;
+    }else{
+      return c94;
+    }
+  }else if(num == 10){
+    if(suit == 1){
+      return c101;
+    }else if(suit == 2){
+      return c102;
+    }else if(suit == 3){
+      return c103;
+    }else{
+      return c104;
+    }
+  }else if(num == 11){
+    if(suit == 1){
+      return c111;
+    }else if(suit == 2){
+      return c112;
+    }else if(suit == 3){
+      return c113;
+    }else{
+      return c114;
+    }
+  }else if(num == 12){
+    if(suit == 1){
+      return c121;
+    }else if(suit == 2){
+      return c122;
+    }else if(suit == 3){
+      return c123;
+    }else{
+      return c124;
+    }
+  }else if(num == 13){
+    if(suit == 1){
+      return c131;
+    }else if(suit == 2){
+      return c132;
+    }else if(suit == 3){
+      return c133;
+    }else{
+      return c134;
+    }
+  }else if(num == 15){
+    if(suit == 1){
+      return c151;
+    }else if(suit == 2){
+      return c152;
+    }else if(suit == 3){
+      return c153;
+    }else{
+      return c154;
     }
   }
 }
