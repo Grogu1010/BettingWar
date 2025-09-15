@@ -206,11 +206,11 @@ function reset(){
     base[1] = new Card(cfd, canvas.width / 2, canvas.height * 0.9, 0.15, 0.15, 0, false, true);
   }
   else if(players == 3){
-    player1num = Math.floor(Math.random() * 2) + 2; // 2 to 14
+    player1num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player1suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
-    player2num = Math.floor(Math.random() * 2) + 2; // 2 to 14
+    player2num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player2suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
-    player3num = Math.floor(Math.random() * 2) + 2; // 2 to 14
+    player3num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player3suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
     player4num = 0;
     player4suit = 0;
@@ -228,13 +228,13 @@ function reset(){
     base[2] = new Card(cfd, canvas.width * 0.2, canvas.height / 2, 0.15, 0.15, 90, false, true);
   }
   else if(players == 4){
-    player1num = Math.floor(Math.random() * 2) + 2; // 2 to 14
+    player1num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player1suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
-    player2num = Math.floor(Math.random() * 2) + 2; // 2 to 14
+    player2num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player2suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
-    player3num = Math.floor(Math.random() * 2) + 2; // 2 to 14
+    player3num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player3suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
-    player4num = Math.floor(Math.random() * 2) + 2; // 2 to 14
+    player4num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player4suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
