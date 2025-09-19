@@ -138,14 +138,10 @@ var winner = 1;
 
 // ace is 1, jack is 11, queen is 12, king is 13, joker is 15
 // 1 is clubs, 2 is diamonds, 3 is Hearts, 4 is spades
-var player1num = 1;
-var player1suit = 1;
-var player2num = 1;
-var player2suit = 1;
-var player3num = 1;
-var player3suit = 1;
-var player4num = 1;
-var player4suit = 1;
+var player1card
+var player2card
+var player3card
+var player4card;
 var base = [];
 base[0] = new Card(c11, 0, 0, 0, 0, 0, false, false);
 base[1] = new Card(c11, 0, 0, 0, 0, 0, false, false);
@@ -189,8 +185,7 @@ function reset(){
   players = document.getElementById('Players').value;
   lastplayers = players;
   if(players == 2){
-    player1num = Math.floor(Math.random() * 13) + 2; // 2 to 15
-    player1suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    player1num = Math.floor(Math.random() * 54) + 1; // 1 to 54
     player2num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player2suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
     player3num = 0;
@@ -234,8 +229,7 @@ function reset(){
     player2suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
     player3num = Math.floor(Math.random() * 13) + 2; // 2 to 15
     player3suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
-    player4num = Math.floor(Math.random() * 13) + 2; // 2 to 15
-    player4suit = Math.floor(Math.random() * 4) + 2; // 2 to 4
+    player4card
     var player1img = num2img(player1num, player1suit);
     var player2img = num2img(player2num, player2suit);
     var player3img = num2img(player3num, player3suit);
