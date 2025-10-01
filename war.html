@@ -6,24 +6,37 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="header">
-      <h1 class="title">Betting War</h1>
-      <div class="menu-bar">
-        <a href="index.html"><button class="menu-button">Home</button></a>
-        <a href="war.html"><button class="menu-button selected-button">War</button></a>
-        <a href="freemode.html"><button class="menu-button">Free Mode</button></a>
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="title">Betting War</h1>
+        <nav class="menu-bar" aria-label="Main navigation">
+          <a href="index.html" class="menu-button">Home</a>
+          <a href="war.html" class="menu-button selected-button">War</a>
+          <a href="freemode.html" class="menu-button">Free Mode</a>
+        </nav>
       </div>
-    </div>
-    <div class="main">
-      <a href="index.html" class="back"><button class="back">Back</button></a>
-      <p style="font-size: 20px;">No. of Players: </p><input type="number" min="2" max="4" step="1" id="Players" value="2">
-      <button onclick="reset();">Reset</button>
-      <button onclick="flipAll();">Flip</button>
-      <input id="winner" value="0" readonly>
-      <div class="game">
-            <canvas id="canvas"></canvas>
+    </header>
+    <main class="main game-main">
+      <a href="index.html" class="back-link">&larr; Back to Home</a>
+      <section class="game-controls" aria-label="War settings">
+        <h2>War Table</h2>
+        <div class="control-row">
+          <label for="Players">Number of Players</label>
+          <input type="number" min="2" max="4" step="1" id="Players" value="2" />
+        </div>
+        <div class="control-actions">
+          <button class="action-button" type="button" onclick="reset();">Reset</button>
+          <button class="action-button primary" type="button" onclick="flipAll();">Flip Cards</button>
+        </div>
+        <div class="status-row">
+          <label for="winner">Winning Player</label>
+          <input id="winner" value="0" readonly class="status-display" />
+        </div>
+      </section>
+      <div class="game-area">
+        <canvas id="canvas"></canvas>
       </div>
-    </div>
+    </main>
     <script src="war.js"></script>
   </body>
 </html>

@@ -6,19 +6,43 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="header">
-      <h1 class="title">Betting War</h1>
-      <div class="menu-bar">
-        <a href="index.html"><button class="menu-button selected-button">Home</button></a>
-        <a href="war.html"><button class="menu-button">War</button></a>
-        <a href="freemode.html"><button class="menu-button">Free Mode</button></a>
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="title">Betting War</h1>
+        <nav class="menu-bar" aria-label="Main navigation">
+          <a href="index.html" class="menu-button selected-button">Home</a>
+          <a href="war.html" class="menu-button">War</a>
+          <a href="freemode.html" class="menu-button">Free Mode</a>
+        </nav>
       </div>
-    </div>
-    <div class="main">
-      <p>Select a game to play:</p>
-      <ul class="game-list">
-        <li><a href="war.html">War</a></li>
-      </ul>
-    </div>
+    </header>
+    <main class="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <h2 id="hero-heading">Shuffle, stake, and seize victory</h2>
+        <p>
+          Experience the fast-paced excitement of classic War with modern visuals
+          and smooth gameplay. Hone your instincts in Free Mode or jump straight
+          into the action.
+        </p>
+        <div class="cta-group">
+          <a href="war.html" class="primary-link">Play War</a>
+          <a href="freemode.html" class="secondary-link">Explore Free Mode</a>
+        </div>
+      </section>
+      <section class="features" aria-label="Game highlights">
+        <article class="feature-card">
+          <h3>Dynamic Battles</h3>
+          <p>Watch every flip play out on the felt with vivid cards and smooth animations.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Custom Sessions</h3>
+          <p>Choose your player count and tailor each round to fit your play style.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Practice to Win</h3>
+          <p>Use Free Mode as a sandbox to master strategies before placing your bets.</p>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
