@@ -6,20 +6,26 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="header">
-      <h1 class="title">Betting War</h1>
-      <div class="menu-bar">
-        <a href="index.html"><button class="menu-button">Home</button></a>
-        <a href="war.html"><button class="menu-button">War</button></a>
-        <a href="freemode.html"><button class="menu-button selected-button">Free Mode</button></a>
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="title">Betting War</h1>
+        <nav class="menu-bar" aria-label="Main navigation">
+          <a href="index.html" class="menu-button">Home</a>
+          <a href="war.html" class="menu-button">War</a>
+          <a href="freemode.html" class="menu-button selected-button">Free Mode</a>
+        </nav>
       </div>
-    </div>
-    <div class="main">
-      <a href="index.html" class="back"><button class="back">Back</button></a>
-      <div class="game">
-            <canvas id="canvas"></canvas>
+    </header>
+    <main class="main game-main">
+      <a href="index.html" class="back-link">&larr; Back to Home</a>
+      <section class="game-controls" aria-label="Free mode overview">
+        <h2>Free Mode Sandbox</h2>
+        <p>Experiment with card flips and hone your strategy without the pressure of bets.</p>
+      </section>
+      <div class="game-area">
+        <canvas id="canvas"></canvas>
       </div>
-    </div>
+    </main>
     <script src="war.js"></script>
   </body>
 </html>
