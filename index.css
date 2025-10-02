@@ -40,6 +40,58 @@ body {
   gap: 1.5rem;
 }
 
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(15, 23, 42, 0.25);
+  cursor: pointer;
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+.menu-toggle:hover,
+.menu-toggle[aria-expanded="true"] {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: transparent;
+}
+
+.menu-toggle-bar {
+  width: 24px;
+  height: 2px;
+  background: #f8fafc;
+  border-radius: 999px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-bar:nth-child(2) {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-bar:nth-child(3) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-bar:nth-child(4) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .title {
   margin: 0;
   font-size: clamp(2rem, 4vw, 2.75rem);
@@ -54,6 +106,7 @@ body {
   gap: 0.75rem;
   flex-wrap: wrap;
   justify-content: flex-end;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
 }
 
 .menu-button {
@@ -102,7 +155,8 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: clamp(1.25rem, 3vw, 1.75rem);
+  padding: 0 clamp(0.25rem, 4vw, 1rem);
 }
 
 .hero h2 {
@@ -113,8 +167,8 @@ body {
 
 .hero p {
   margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: clamp(1rem, 2.5vw, 1.05rem);
+  line-height: 1.65;
   color: #334155;
 }
 
@@ -424,12 +478,40 @@ textarea.status-display {
 
   .header-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 0.75rem;
   }
 
-  .menu-bar {
+  .js-enabled .menu-toggle {
+    display: inline-flex;
+    align-self: flex-end;
+  }
+
+  .js-enabled .menu-bar.menu-collapsible {
+    position: relative;
+    flex-direction: column;
+    align-items: stretch;
     width: 100%;
-    justify-content: flex-start;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background: rgba(15, 23, 42, 0.88);
+    border-radius: 16px;
+    padding: 0;
+    box-shadow: 0 20px 40px -24px rgba(15, 23, 42, 0.75);
+  }
+
+  .js-enabled .menu-bar.menu-collapsible.menu-open {
+    padding: 0.75rem;
+    max-height: 500px;
+    opacity: 1;
+    gap: 0.6rem;
+  }
+
+  .js-enabled .menu-bar.menu-collapsible .menu-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
   }
 
   .main {
@@ -453,11 +535,6 @@ textarea.status-display {
 }
 
 @media (max-width: 480px) {
-  .menu-button {
-    width: 100%;
-    justify-content: center;
-  }
-
   .control-row {
     flex-direction: column;
     align-items: flex-start;
@@ -473,6 +550,24 @@ textarea.status-display {
 
   .action-button {
     flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .hero {
+    text-align: left;
+    gap: 1.25rem;
+  }
+
+  .hero h2 {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+
+  .cta-group {
+    justify-content: flex-start;
+  }
+
+  .primary-link,
+  .secondary-link {
     width: 100%;
   }
 }
