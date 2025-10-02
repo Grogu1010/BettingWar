@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>War</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free Mode</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <header class="header">
       <div class="header-inner">
         <h1 class="title">Betting War</h1>
-        <nav class="menu-bar" aria-label="Main navigation">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="visually-hidden">Toggle navigation</span>
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav id="primary-navigation" class="menu-bar" aria-label="Main navigation">
           <a href="index.html" class="menu-button">Home</a>
           <a href="war.html" class="menu-button">War</a>
           <a href="blackjack.html" class="menu-button">Blackjack</a>
@@ -27,6 +34,7 @@
         <canvas id="canvas"></canvas>
       </div>
     </main>
+    <script src="nav.js"></script>
     <script src="war.js"></script>
   </body>
 </html>
