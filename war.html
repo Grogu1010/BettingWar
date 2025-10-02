@@ -17,24 +17,28 @@
       </div>
     </header>
     <main class="main game-main">
-      <a href="index.html" class="back-link">&larr; Back to Home</a>
-      <section class="game-controls" aria-label="War settings">
-        <h2>War Table</h2>
-        <div class="control-row">
-          <label for="Players">Number of Players</label>
-          <input type="number" min="2" max="4" step="1" id="Players" value="2" />
+      <div class="page-actions">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+      </div>
+      <div class="game-layout">
+        <section class="game-controls" aria-label="War settings">
+          <h2>War Table</h2>
+          <div class="control-row">
+            <label for="Players">Number of Players</label>
+            <input type="number" min="2" max="4" step="1" id="Players" value="2" />
+          </div>
+          <div class="control-actions">
+            <button class="action-button" type="button" onclick="reset();">Reset</button>
+            <button class="action-button primary" type="button" onclick="flipAll();">Flip Cards</button>
+          </div>
+          <div class="status-row">
+            <label for="winner">Winning Player</label>
+            <input id="winner" value="0" readonly class="status-display" />
+          </div>
+        </section>
+        <div class="game-area">
+          <canvas id="canvas"></canvas>
         </div>
-        <div class="control-actions">
-          <button class="action-button" type="button" onclick="reset();">Reset</button>
-          <button class="action-button primary" type="button" onclick="flipAll();">Flip Cards</button>
-        </div>
-        <div class="status-row">
-          <label for="winner">Winning Player</label>
-          <input id="winner" value="0" readonly class="status-display" />
-        </div>
-      </section>
-      <div class="game-area">
-        <canvas id="canvas"></canvas>
       </div>
     </main>
     <script src="war.js"></script>

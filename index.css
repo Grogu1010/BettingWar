@@ -192,7 +192,30 @@ body {
 }
 
 .game-main {
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+.page-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-layout {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+  align-items: stretch;
+}
+
+.game-main .game-controls {
+  flex: 0 0 280px;
+  max-width: 320px;
+  align-self: flex-start;
+}
+
+.game-layout .game-area {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .back-link {
@@ -322,7 +345,7 @@ body {
 }
 
 #canvas {
-  width: min(900px, 100%);
+  width: min(640px, 100%);
   min-height: 320px;
   border-radius: 16px;
   border: none;
@@ -351,6 +374,15 @@ body {
     width: calc(100% - 2rem);
     margin: 1.5rem auto 2.5rem;
     padding: clamp(1.25rem, 4vw, 2.5rem);
+  }
+
+  .game-layout {
+    flex-direction: column;
+  }
+
+  .game-main .game-controls {
+    flex: 1 1 auto;
+    max-width: 100%;
   }
 
   .game-area {
