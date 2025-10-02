@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="title">Betting War</h1>
+        <nav class="menu-bar" aria-label="Main navigation">
+          <a href="index.html" class="menu-button">Home</a>
+          <a href="war.html" class="menu-button">War</a>
+          <a href="blackjack.html" class="menu-button selected-button">Blackjack</a>
+          <a href="freemode.html" class="menu-button">Free Mode</a>
+        </nav>
+      </div>
+    </header>
+    <main class="main game-main">
+      <div class="page-actions">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+      </div>
+      <div class="game-layout">
+        <section class="game-controls" aria-label="Blackjack controls">
+          <h2>Blackjack Table</h2>
+          <p>Deal the cards, hit for more, or stand to see if you can beat the dealer.</p>
+          <div class="status-row">
+            <label for="player-total">Player Total</label>
+            <input id="player-total" class="status-display" value="0" readonly />
+          </div>
+          <div class="status-row">
+            <label for="dealer-total">Dealer Total</label>
+            <input id="dealer-total" class="status-display" value="0" readonly />
+          </div>
+          <div class="control-actions">
+            <button type="button" class="action-button primary" id="deal-button">Deal</button>
+            <button type="button" class="action-button" id="hit-button" disabled>Hit</button>
+            <button type="button" class="action-button" id="stand-button" disabled>Stand</button>
+            <button type="button" class="action-button" id="reset-button">Reset</button>
+          </div>
+          <div class="status-row">
+            <label for="game-message">Round Status</label>
+            <textarea id="game-message" class="status-display multiline" rows="3" readonly>
+              Press Deal to start a round.
+            </textarea>
+          </div>
+        </section>
+        <section class="game-area blackjack-area" aria-label="Blackjack play area">
+          <div class="hand" aria-live="polite">
+            <h3>Dealer</h3>
+            <div class="hand-cards" id="dealer-cards"></div>
+          </div>
+          <div class="hand" aria-live="polite">
+            <h3>Player</h3>
+            <div class="hand-cards" id="player-cards"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="blackjack.js"></script>
+  </body>
+</html>
